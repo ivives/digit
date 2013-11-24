@@ -1,0 +1,102 @@
+<pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+	&lt;title&gt;formularios&lt;/title&gt;
+	&lt;meta name="author" content="mati" /&gt;
+	&lt;!-- Date: 2013-11-06 --&gt;
+	
+	&lt;style type="text/css"&gt;
+  		fieldset{
+			background-color:#CEE3F6;
+			border-color:#0489B1;
+			width:450px; 
+		}
+	&lt;/style&gt;
+	
+	&lt;script&gt;
+		function limita(objeto,maximoCaracteres) {
+  			
+  			if(objeto.value.length &gt;= maximoCaracteres ) {
+    			return false;
+  			}
+  			else {
+    			return true;
+  			}
+		}
+		
+		function validar(){
+			
+			var nom = document.getElementById("nombre");
+			var ape = document.getElementById("apellidos");
+			var dir = document.getElementById("direccion");
+			var radios = document.getElementsByName("estado");
+			var esta = "";
+			var seleccion = "";
+			var i;
+			if (nom.value == "") {
+				alert("El campo nombre no puede estar vacio");
+				nombre.focus();
+				return false;
+			}
+			if (ape.value == "") {
+				alert("El campo apellidos no puede estar vacio");
+				apellidos.focus();
+				return false;
+			}
+			if (dir.value == ""){
+				alert("El campo direccion no puede estar vacio");
+				direccion.focus();
+				return false;				
+			}
+						
+			for(i=0; i&lt;radios.length; i++) {
+				if (radios[i].checked){
+					esta = radios[i].value;
+				}
+			}	
+			for (i=1; i &lt;=5; i++){
+				var check = document.getElementById("aficion"+i);
+				if (check.checked){
+					seleccion += check.value + ",  ";
+				}
+			}
+			
+			alert("Nombre: " + nom.value + "\nLongitud nombre: " + nom.value.length + 
+				"\n\nApellidos: " + ape.value + "\nLongitud apellidos: " + ape.value.length +
+				"\n\nDireccion: " + dir.value + "\nLongitud direccion: " + dir.value.length + 
+				"\n\nEstado civil: " + esta + "\n\nAficiones: " + seleccion);
+		}		
+				
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;Formulario&lt;/legend&gt;
+		&lt;form name="datos" method="post"&gt;
+		  	Nombre:&lt;input type="text" id="nombre" onkeypress="return limita(this,30);"/&gt;
+		  	Apellidos:&lt;input type="text" id="apellidos" onkeypress="return limita(this,50);"/&gt;
+		  	&lt;br&gt;
+		  	Direccion:&lt;textarea id="direccion" rows="1" cols="44" onkeypress="return limita(this,100);"&gt;&lt;/textarea&gt;
+		  	&lt;br&gt;
+		  	Estado civil:
+		  	&lt;br&gt;
+			&lt;input type="radio" value="soltero" name="estado" id="estado_solt" checked="checked"/&gt; Soltero
+			&lt;input type="radio" value="casado" name="estado" id="estado_casa"/&gt; Casado
+			&lt;input type="radio" value="divorciado" name="estado" id="estado_divo"/&gt; Divorciado
+			&lt;br&gt;
+			Aficiones:
+			&lt;br&gt;
+			&lt;input type="checkbox" value="deporte" id="aficion1" checked="checked"/&gt; Deporte
+			&lt;input type="checkbox" value="leer" id="aficion2" /&gt; Leer
+			&lt;input type="checkbox" value="cine" id="aficion3" /&gt; Cine
+			&lt;input type="checkbox" value="musica" id="aficion4"/&gt; Musica
+			&lt;input type="checkbox" value="videojuegos" id="aficion5"/&gt; Videojuegos
+		&lt;/form&gt;	
+		&lt;br&gt;
+		&lt;input type="button" value="Validar formulario" onclick="validar();"/&gt;
+	&lt;/fieldset&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>

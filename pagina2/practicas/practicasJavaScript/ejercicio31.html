@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio31</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-22 -->
+	
+	
+	<style type="text/css">
+		.oculto { display: none; }
+		.visible { display: inline; }
+	</style>
+ 
+	<script type="text/javascript">
+		function muestra() {
+		  var elemento = document.getElementById("adicional");
+		  elemento.className = "visible";
+		 
+		  var enlace = document.getElementById("enlace");
+		  enlace.className = "oculto";
+		  
+		  var enlace2 = document.getElementById("enlace2");
+		  enlace2.className = "visible";
+		}
+		
+		function contraer() {
+			var elemento = document.getElementById("adicional");
+			elemento.className = "oculto";
+			
+			var enlace = document.getElementById("enlace");
+			enlace.className = "visible";
+		
+			var enlace2 = document.getElementById("enlace2");
+			enlace2.className = "oculto";		
+		}
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 1.   Practica III</h2>
+	<div id="enunciado">
+		<p>
+			Modificar el contenido del ejercicio de -leer más- para que también se pueda contraer
+			con otro hiperenlace que mostrará -contraer- Según el estado en que se encuentre, se
+			mostrará un hiperenlace u otro. Nunca se pueden mostrar los dos hiperenlaces al mismo
+			tiempo <a href="http://www.librosweb.es/javascript/capitulo11/ejercicio_12.html">http://www.librosweb.es/javascript/capitulo11/ejercicio_12.html</a>
+			
+		</p>
+		<p id="texto" align="justify">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, 
+		commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, 
+		ultrices porttitor, pede. <span id="adicional" class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, 
+		faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum 
+		dolor sit amet, consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed 
+		tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.</span></p>
+		<p align="center"><a id="enlace" href="#" onclick="muestra(); return false;">Leer mas</a>
+		<a id="enlace2" href="#" class="oculto" onclick="contraer(); return false;">Contraer</a></p>
+		<p align="center"><input id="volver" type="button" value="Volver" onclick="history.go(-1)"/></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio13b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-19 -->
+	
+	<script type="text/javascript">
+		function ejercicio3(){
+						
+			var elementos = ["true", 5, "false", "hola", "adios", 2];
+			var i;
+			
+			document.write("<table align='center' border='3' cellspacing='5' cellpadding='10'><tr>");
+			
+			for(i = 0; i < elementos.length; i++) {
+				document.write("<td>" + elementos[i] + "</td>");
+				
+				
+			}
+			
+			document.write("</tr></table><br/>");
+		}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 3b.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			Convertir en un Array los elementos del ejercicio 1 del apartado A y listar todos los elementos
+			mostrando el resultado mediante una tabla en Html<br><br>
+		</p>
+		<script>
+			
+			ejercicio3();
+		</script>
+		
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="document.location.reload();"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

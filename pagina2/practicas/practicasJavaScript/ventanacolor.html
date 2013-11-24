@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio28b ventanaColor</title>
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-21 -->
+	
+</head>
+<body>
+<body id="colores">
+		
+	<p align="center"><input type="button" value="Cerrar" onclick="window.close();"></p>
+</body>
+
+	<script type="text/javascript">
+		function Colores()
+		{
+		    var vars = [], hash;
+		    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		    for(var i = 0; i < hashes.length; i++)
+		    {
+		        hash = hashes[i].split('=');
+		        vars.push(hash[0]);
+		        vars[hash[0]] = hash[1];
+		    }
+		    return vars;
+		}
+			
+		var r = Colores()['r']
+		var g = Colores()['g']
+		var b = Colores()['b']
+			
+		document.getElementById('colores').style.background = 'rgb('+r+','+g+','+b+')';
+	</script>
+</html>

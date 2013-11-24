@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>eventos</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-10-28 -->
+	
+	<script>
+		function resalta(capa){
+			capa.style.borderColor='black';
+		}
+		
+		function noResalta(capa){
+			capa.style.borderColor='silver';
+		}
+		
+	</script>
+	
+	
+</head>
+<body>
+
+	<input type="button" value="Pinchame y veras" onclick="alert('Has pinchado con el raton')";/>
+
+
+	<div style="border: dotted" onclick="alert('Has pinchado con el ratón');" 
+		onmouseover="alert('Acabas de pasar el ratón por encima');">
+  	Puedes pinchar sobre este elemento o simplemente pasar el raton por encima
+	</div>
+
+
+	<div id="contenidos" style="width:150px; height:60px; border:thin solid silver" 
+		onmouseover="resalta(this);" 
+		onmouseout="noResalta(this);">
+  	Seccion de contenidos...
+	</div>
+
+
+
+
+</body>
+</html>
+

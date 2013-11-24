@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio25a</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-20 -->
+	
+	<script type="text/javascript">
+				
+		function countDown(repite,a,me,d,h,m,s){
+		    var form=document.getElementById('form');
+		    if (repite=='true'){
+		 
+		    var anyo=a;
+		    var mes=me-1;
+		    var dia=d;
+		    var hora=h;
+		    var minuto=m;
+		    var segundo=s;
+		 
+		    var La_fecha = new Date(); 
+		    var La_fecha_total = new Date(anyo,mes,dia,hora,minuto,segundo); 
+		    toSecond = (La_fecha_total - La_fecha)/1000
+		    toDay = parseInt(toSecond/86400);
+		    toSecond=toSecond-(toDay*86400);
+		    toHour = parseInt(toSecond/3600);
+		    toSecond=toSecond-(toHour*3600);
+		    toMinute=parseInt(toSecond/60);
+		    toSecond=parseInt(toSecond-(toMinute*60));
+		    }
+		         
+		    toSecond=toSecond-1;
+		         
+		         
+		    if(toSecond<0)
+		    {
+		        toSecond=59;
+		        toMinute=toMinute-1;
+		    }
+		    form.second.value=toSecond;
+		 
+		    if(toMinute<0)
+		    {
+		        toMinute=59;
+		        toHour=toHour-1;
+		    }
+		    form.minute.value=toMinute;
+		 
+		         
+		    if(toHour<0)
+		    {   toHour=23;
+		            toDay=toDay-1;
+		             
+		    }
+		    
+		    form.hour.value=toHour;
+		    form.day.value=toDay;
+		    if(toDay<0)
+		    {
+		         
+		        form.second.value=0;
+		        form.minute.value=0;
+		        form.hour.value=0;
+		        form.day.value=0;
+		             
+		    }
+		 
+		    else{
+		        setTimeout("countDown('false')",1000);
+		    }
+		}
+
+	</script>
+	
+</head>
+<body onload="countDown('true','2013','12','31','23','59','59')">
+	<h2>Ejercicio 5a.   Practica II</h2>
+	<div id="enunciado">
+		<p>
+			Crea un Script y muéstralo en la página index de tu site de manera destacada y con un
+			estilo llamativo el número de días, horas, minutos y segundos que quedan para el fin de año.<br><br>
+			Busca en google recursos con entradas tipo: “relojes en css” “relojes con css y javascript”, etc<br><br>
+			Ejemplos que os pueden inspirar y servir:<br><br>
+			http://www.ajaxshake.com/es/JS/12141/relojes.html<br><br>
+		</p>
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio5();" />
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+		
+	</div>
+	
+	<div id="reloj">
+		<form id="form" name="form" align="center">
+         	<span id="hora">
+				<table id="cuenta"> 
+					<tr>
+						<td id="texto_anuncio" colspan="4">!! Quedan para Fin de Año !!</td>
+					</tr>
+					<tr>
+						<td colspan="4" height="25px" > </td>
+					</tr>
+					<tr id="texto_contador">
+						<td>&nbsp; &nbsp; Dias</td>
+						<td>&nbsp; &nbsp; Horas</td>
+						<td>Minutos</td>
+						<td>Segundos</td>
+					</tr>
+					<tr>
+						<td><input type="text" size="1" class="form_input" name="day" readonly></td>
+						<td><input type="text" size="1" class="form_input" name="hour" readonly></td>
+						<td><input type="text" size="1" class="form_input" name="minute" readonly></td>
+						<td><input type="text" size="1" class="form_input" name="second" readonly></td>
+				</tr>
+				</table>          
+			</span>
+			
+         
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>split</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-10-16 -->
+	
+	<script type="text/javascript">
+		 
+//function Split 
+
+function miSplit(cadena, separador)
+{	
+
+ 	var cadena=document.getElementById("cadena");
+	cadena=cadena.value;
+	var separador=document.getElementById("separador");
+	separador=separador.value;
+	
+	var longitud=0;
+	var vector=new Array();
+	var posicion=0;
+		
+	for (var i in cadena)
+	{
+		longitud++;	
+				
+	}
+			
+	vector[posicion]="";
+	for(var i = 0; i < longitud; i++)
+	{
+		if(cadena[i]!=separador)
+		{
+			vector[posicion]+=cadena[i];
+		}
+		else
+		{
+			posicion++;
+			vector[posicion]="";
+			}	
+	}
+	alert (vector);	
+}	
+</script>
+	
+</head>
+<body>
+			<input type="text" id="cadena"/>
+			<input type="text" id="separador"/>	
+			<input type="button" value="Aceptar split" onclick="miSplit()"/>
+			
+	
+</body>
+</html>
+

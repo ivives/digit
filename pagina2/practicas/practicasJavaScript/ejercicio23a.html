@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio23a</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-20 -->
+	
+	<script type="text/javascript">
+		
+		function ejercicio3(){
+			
+			var cadena =document.getElementById("cad").value;
+			var contador = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,];
+			var letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+			var i;
+			 for(i=0;i<cadena.length;i++){
+			   if (cadena[i] =="a" || cadena[i] == "A"){
+			      contador[0]++;
+			   } else 
+			   if (cadena[i] =="b" || cadena[i] == "B"){
+			      contador[1]++;
+			   } else 
+			   if (cadena[i] =="c" || cadena[i] == "C"){
+			      contador[2]++;
+			   } else 
+			   if (cadena[i] =="d" || cadena[i] == "D"){
+			      contador[3]++;
+			   } else 
+			   if (cadena[i] =="e" || cadena[i] == "E"){
+			      contador[4]++;
+			   } else 
+			   if (cadena[i] =="f" || cadena[i] == "F"){
+			      contador[5]++;
+			   } else 
+			   if (cadena[i] =="g" || cadena[i] == "G"){
+			      contador[6]++;
+			   } else 
+			   if (cadena[i] =="h" || cadena[i] == "H"){
+			      contador[7]++;
+			   } else 
+			   if (cadena[i] =="i" || cadena[i] == "I"){
+			      contador[8]++;
+			   } else 
+			   if (cadena[i] =="j" || cadena[i] == "J"){
+			      contador[9]++;
+			   } else 
+			   if (cadena[i] =="k" || cadena[i] == "K"){
+			      contador[10]++;
+			   } else 
+			   if (cadena[i] =="l" || cadena[i] == "L"){
+			      contador[11]++;
+			   } else 
+			   if (cadena[i] =="m" || cadena[i] == "M"){
+			      contador[12]++;
+			   } else 
+			   if (cadena[i] =="n" || cadena[i] == "N"){
+			      contador[13]++;
+			   } else 
+			   if (cadena[i] =="ñ" || cadena[i] == "Ñ"){
+			      contador[14]++;
+			   } else 
+			   if (cadena[i] =="o" || cadena[i] == "O"){
+			      contador[15]++;
+			   } else 
+			   if (cadena[i] =="p" || cadena[i] == "P"){
+			      contador[16]++;
+			   } else 
+			   if (cadena[i] =="q" || cadena[i] == "Q"){
+			      contador[17]++;
+			   } else 
+			   if (cadena[i] =="r" || cadena[i] == "R"){
+			      contador[18]++;
+			   } else 
+			   if (cadena[i] =="s" || cadena[i] == "S"){
+			      contador[19]++;
+			   } else 
+			   if (cadena[i] =="t" || cadena[i] == "T"){
+			      contador[20]++;
+			   } else 
+			   if (cadena[i] =="u" || cadena[i] == "U"){
+			      contador[21]++;
+			   } else 
+			   if (cadena[i] =="v" || cadena[i] == "V"){
+			      contador[22]++;
+			   } else 
+			   if (cadena[i] =="w" || cadena[i] == "W"){
+			      contador[23]++;
+			   } else 
+			   if (cadena[i] =="x" || cadena[i] == "X"){
+			      contador[24]++;
+			   } else 
+			   if (cadena[i] =="y" || cadena[i] == "Y"){
+			      contador[25]++;
+			   } else 
+			   if (cadena[i] =="z" || cadena[i] == "Z"){
+			      contador[26]++;
+			   }
+			}
+			
+			var resultado = "";
+			for(i = 0; i < letras.length; i++){
+				resultado += (letras[i] + ": " + contador[i] + "   ");
+			}
+			
+			alert("La estadistica para la cadena: \"" + cadena + "\" es: " + resultado);
+        }
+        
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 3a.   Practica II</h2>
+	<div id="enunciado">
+		<p>
+			Realiza una página que contenga una función JavaScript para hacer estadísticas sobre una
+			cadena de texto que se le pase, contando el número de veces que aparece cada letra.<br><br>
+			Ejemplo: Si se introduce “No dejes de probar tus ideas, pueden ser las mejores para tí”. Este
+			debería ser el Rdo.<br><br>
+			<b>La estadística para la cadena: </b> “No dejes de probar tus ideas,
+			pueden ser las mejores para tí”<br>
+			A:5 B:1 C:0 D:4 E:9 F:0 G:0 H:0 I:1 J:2 K:0 L:1 M:1 N:2 O:3 P:3 Q:0 R:5 S:6 T:2 U:2 V:0 W:0 X:0 Y:0 Z:0<br><br>
+			** Nota: Es importante que se muestre tal cual y en ese orden
+		</p>
+		<p align="center">
+			Introduce una cadena de texto <input type="text" id="cad" size="50" />
+			
+		</p>
+		
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio3();" />
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio24a</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-20 -->
+	
+	<script type="text/javascript">
+				
+		function ejercicio4(){
+			momentoActual = new Date()
+			hora = momentoActual.getHours()
+			minuto = momentoActual.getMinutes()
+			segundo = momentoActual.getSeconds()
+			
+			var sufijo = ' AM';
+			if(hora > 12) {
+			  hora = hora - 12;
+			  sufijo = ' PM';
+			}
+			
+			if(hora < 10) { hora = '0' + hora; }
+			if(minuto < 10) { minuto = '0' + minuto; }
+			if(segundo < 10) { segundo = '0' + segundo; }
+			
+			horaImprimible = hora + " : " + minuto + " : " + segundo + sufijo
+			
+			var dia = new Array("Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom");
+			
+			
+			
+			document.form_reloj.reloj.value = dia[momentoActual.getDay()] + "  " + momentoActual.getDate()  + "-" + 
+						(momentoActual.getMonth()+1) + "-" + momentoActual.getFullYear()  + "   " + horaImprimible
+			
+			setTimeout("ejercicio4()",1000)
+
+			
+        }
+	</script>
+	
+</head>
+
+	
+<body >
+
+
+	<h2>Ejercicio 4a.   Practica II</h2>
+	<div id="enunciado">
+		<p>
+		Modifica el código que aparece en el enlace para que se muestre la fecha junto con el reloj<br>
+		<a href="http://www.desarrolloweb.com/articulos/ejemplos/tallerjs/relojjavascript.html">http://www.desarrolloweb.com/articulos/ejemplos/tallerjs/relojjavascript.html</a>
+		
+		<h3>Fecha y Hora</h3>
+
+		<form name="form_reloj">
+		<input type="text" name="reloj" size="30">
+		</form>
+		
+		</p>
+		<input id="ejecutar" type="button" value="Resultado" " onclick="ejercicio4();"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

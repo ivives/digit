@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio26b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-21 -->
+	
+	<script type="text/javascript">
+				
+		var imagenes = new Array("http://4.bp.blogspot.com/-KWOIOnE6WbE/UbWpE284leI/AAAAAAAAFLw/ncD-eqkL9PY/s1600/FWIND2.jpg",
+		"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTK2jPoi5amShmCvdhaLcOMubvkC7dgno5TPPxlMtfJFRm5kf8y", 
+		"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTbth7X7fWE95ELRJJP0I_prJ9UPWndGLgt3_uXdA7XDu91e-Y8-w", 
+		"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQqwIo4pepy2W_Hv6aNnDGxa4tTlSeKCpk_RSDASQmrVn5fY6gA");
+		
+		function enlaceAleatorio(){ 
+		   	 aleat = Math.random() * imagenes.length 
+		   	 aleat = Math.floor(aleat) 
+		   	 window.location=imagenes[aleat] 
+		} 
+
+	</script>
+	
+</head>
+<body>
+	<script type="text/javascript">
+
+		function makeArray(n) {
+			this.length = n;
+			for (var i=1; i<=n; i++) {
+			this[i] = ""; 
+			}
+			return this;
+			}
+			var i;
+		function imagenAleatoria() {
+			i = Math.floor(4 * Math.random() + 1);
+			return image[i];
+			}
+			image = new makeArray(4);
+			image[1]="images/csharp.png";
+			image[2]="images/html.png";
+			image[3]="images/java.png";
+			image[4]="images/javascript.png";
+	
+	
+		function numeroAleatorio(){
+		  var numero = prompt("Escribe un numero entre 1 y 10");
+		  if( isNaN(numero)) {
+      			alert("Debes introducir un numero." );
+      			numeroAleatorio();
+      			return false;
+      		}	
+			if (numero < 1 || numero > 10){
+				alert("El numero debe estar entre 1 y 10");
+				numeroAleatorio();
+				return false;
+			}
+      		
+		  numero = parseInt(numero); 
+		  var num = parseInt(Math.random()*10)+1;
+		  if (num == numero)
+		    alert("El numero sorteado es el  " + num + "\nHAS GANADO...");
+		  else
+		    alert("El numero sorteado es el  " + num + "\nHAS PERDIDO..."); 
+		}
+	</script>
+	
+	
+	
+	<h2>Ejercicio 6b.   Practica II</h2>
+	<div id="enunciado">
+		<p>
+			Modificar el script de enlace aleatorio que hemos visto en el manual
+			<a href="http://www.desarrolloweb.com/articulos/751.php">http://www.desarrolloweb.com/articulos/751.php</a> para que:
+			<p>
+				a) Muestre en su lugar al menos 4 imágenes aleatorias (cualesquiera)<br>
+				b) Diseña al menos 4 imágenes por ti mismo (todas del mismo tamaño), para que nada
+				mas cargar la página (sin tener que activar ningún enlace) muestre una de esas
+				imágenes creadas por tí, junto con el hiperenlace asociado a unas de tus prácticas ya
+				hechas.<br>
+				c) Confeccionar un programa que solicita un valor comprendido entre 1 y 10. Luego
+				generar un valor aleatorio entre 1 y 10, mostrar un mensaje con el número sorteado e
+				indicar si ganó o perdió:</>
+		</p>
+		<p id="imagenes" align="center">
+			<script type="text/javascript">
+				document.write("<img src=" +imagenAleatoria() +" width=500 height=200 border=0>");
+			</script>
+		</p>
+		<br>
+		<input id="sorteo" type="button" value="Sorteo" onclick="numeroAleatorio();"/>
+		<input id="enlace" type="button" value="Enlace aleatorio" onclick="enlaceAleatorio();"/><br>
+		<a href="ejercicio25a.html" target="_blank"><input id="ejecutar" type="button" value="Hiperenlace" /></a>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+		
+		
+	</div>
+</body>
+</html>

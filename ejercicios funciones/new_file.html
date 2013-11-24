@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>new_file</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-10-25 -->
+	
+	<script type="text/javascript">
+//		cadena = prompt("Introduce un mensaje");
+//		separador = prompt("Introduce un separador");
+
+		
+		
+		function miSplit(cadena, separador){
+			
+			cadena = "hola mundo";
+			separador = " ";
+			
+			var posicionCadena;
+			var posicionArray = 0;
+			var cadenaDividida = "";
+			var resultado = new Array;
+			for (posicionCadena in cadena){
+				
+				
+				
+				if (cadena(posicionCadena) == separador){
+					resultado[posicionArray] = cadenaDividida;
+					posicionArray ++;
+					cadenaDividida = "";
+				}else{
+					cadenaDividida += cadena[posicionCadena];
+				}
+			};
+			
+			if (cadenaDividida != ""){
+				resultado[posicionArray] = cadenaDividida;
+			}
+			
+			return resultado;			
+			
+		}
+		
+		
+		alert(resultado);
+		
+		
+		
+
+		
+		
+		
+	</script>
+	
+	
+	
+</head>
+<body>
+
+</body>
+</html>
+

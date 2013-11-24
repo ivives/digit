@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>limitaTextArea</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-11-06 -->
+	
+	<script>
+		
+		function limita(objeto, maximoCaracteres) {
+  		
+  			if(objeto.value.length >= maximoCaracteres ) {
+    			return false;
+  			}
+  			else {
+    			return true;
+  			}
+		}
+		
+		
+	</script>
+	
+</head>
+<body>
+
+	<textarea id="texto" onkeypress="return limita(this, 50);"></textarea>
+
+</body>
+</html>
+

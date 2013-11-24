@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio12a</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-15 -->
+	
+	<script type="text/javascript">
+		function ejercicio2(){
+	 		var a = document.getElementById("uno").value;
+      		var b = document.getElementById("dos").value;
+      		var c = document.getElementById("tres").value;
+      		
+      		if( isNaN(a)) {
+      			alert("Debes introducir numeros." );
+      			uno.focus();
+			  	return false;
+			}
+			
+			if( isNaN(b)) {
+      			alert("Debes introducir numeros." );
+      			dos.focus();
+			  	return false;
+			}
+			
+			if( isNaN(c)) {
+      			alert("Debes introducir numeros." );
+      			tres.focus();
+			  	return false;
+			}
+		
+			var mayor = 0;
+			var medio = 0;
+			var menor = 0;
+			
+				if(Number(a) < Number(b) && Number(a) < Number(c)){
+					menor = a;
+				}else{ 
+					if(Number(b) < Number(a) && Number(b) < Number(c)){
+						menor = b;
+					}else{
+						menor = c;
+					}
+				}
+			
+				if(Number(a) > Number(b) && Number(a) > Number(c)){
+					mayor = a;
+				}else{
+					if(Number(b) > Number(a) && Number(b) > Number(c)){
+						mayor = b;
+					}else{
+						mayor = c;
+					}
+				}
+											
+			medio =((Number(a) + Number(b) + Number(c) ) - (Number(mayor) + Number(menor)));
+			
+			alert(menor + "   " + medio + "   " + mayor);
+		  	 	
+	 	}
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 2a.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+		 Pedir al usuario tres valores numéricos y determinar el orden ascendente de dichos valores
+		</p>
+		<p align="center">
+			Primer numero <input type="text" id="uno" size="3"/>
+			Segundo numero <input type="text" id="dos" size="3"/>
+			Tercer numero <input type="text" id="tres" size="3"/>
+		</p>
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio2()"/>
+		<input id="volver" type="button" value="Volver" onClick="history.go(-1)"/>
+	</div>
+</body>
+</html>

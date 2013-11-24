@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio14b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-19 -->
+	
+	<script type="text/javascript">
+		
+		var a;
+	    var b;
+	    var c;
+	    var mayor;
+		var medio;
+		var menor;
+		var repetir;	
+				
+		function ejercicio4(){
+			entradaDatos();
+			if( isNaN(a)) {
+      			alert("Debes introducir numeros." );
+      			uno.focus();
+			  	return false;
+			}
+			
+			if( isNaN(b)) {
+      			alert("Debes introducir numeros." );
+      			dos.focus();
+			  	return false;
+			}
+			
+			if( isNaN(c)) {
+      			alert("Debes introducir numeros." );
+      			tres.focus();
+			  	return false;
+			}
+			maxMedyMin(a,b,c);
+			muestraOrdenValores(mayor, medio, menor);
+			repiteFinalizaProceso(repetir);
+		}
+		
+		function entradaDatos(){
+			a = document.getElementById("uno").value;
+	      	b = document.getElementById("dos").value;
+	      	c = document.getElementById("tres").value;
+	      	
+	      	a=Number(a);
+	      	b=Number(b);
+	      	c=Number(c);
+	      
+				
+		}
+		function maxMedyMin(a,b,c){
+			mayor = 0;
+			medio = 0;
+			menor = 0;	
+				
+      			if(a < b && a < c){
+					menor = a;
+				}else{ 
+					if(b < a && b < c){
+						menor = b;
+					}else{
+						menor = c;
+					}
+				}
+			
+				if(a > b && a > c){
+					mayor = a;
+				}else{
+					if(b > a && b > c){
+						mayor = b;
+					}else{
+						mayor = c;
+					}
+				}
+											
+			medio =((a + b + c ) - (Number(mayor) + Number(menor)));
+					
+		}
+		
+		function muestraOrdenValores(mayor, medio, menor){
+			alert("Mayor es: "+ mayor +", Mediano es: "+ medio +", Menor es: "+ menor);
+		
+		
+		}
+		
+		function repiteFinalizaProceso(repetir){
+			if (confirm("Ha decidido finalizar el proceso")){
+				repetir=false;
+				history.go(-1);
+			}else{
+				repetir=true;
+				uno.focus();
+				
+			}
+		}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 4b.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			Modificar el ejercicio 2 del apartado A para convertirlo en cuatro funciones a la que llamaréis
+			<b>EntradaDatos()</b><br>
+			<b>MaxMedyMin (a,b,c).</b> Donde se realizan las comparaciones pertinentes y se asignan los valores
+			correspondientes a tres variables Maximo, Medio; Minimo<br>
+			<b>MuestraOrdenValores(a,b,c).</b> Solo sirve para mostrar valores correspondientes al mayor, medio y
+			mínimo<br>
+			<b>RepiteFinalizaProceso().</b> Se le pregunta al usuario si desea continuar o no con el proceso.
+			Escribir un mensaje tipo “Ha decidido finalizar el proceso”, para garantizar la salida correcta del
+			programa<br>
+			El proceso de comparación se estará repitiendo mientras el usuario lo desee.<br>
+			Ejemplo:<br>
+			Si ha introducido: 23, 2, 3 <b>Mostrará:</b>  Mayor es: 23 Mediano es:3 Menor es: 2<br>
+			Continuar s/n?
+		</p>
+		
+		<p align="center">
+			Primer numero <input type="text" id="uno" size="3"/>
+			Segundo numero <input type="text" id="dos" size="3"/>
+			Tercer numero <input type="text" id="tres" size="3"/>
+			
+		</p>
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio4()"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

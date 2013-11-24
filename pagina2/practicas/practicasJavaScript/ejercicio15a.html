@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio15a</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-18 -->
+	
+	<script type="text/javascript">
+		function ejercicio5(){
+			
+			var a=0;
+	        var b=1;
+	        var i;
+	        var suma = 0;
+	        var numero = document.getElementById("num").value;
+	        
+	        if( isNaN(numero)) {
+	      			alert("Debes introducir un numero." );
+	      			num.focus();
+				  	return false;
+				}
+	        
+	        var serie = new Array(numero - 1); 
+	        serie[0]=a;
+	        serie[1]=b;
+
+	         for(i = 2; i < numero; i++) {
+	         	serie[i] = a + b;
+	            a = b;
+	            b = serie[i];
+	         }
+	         
+	         for(i = 0; i < numero; i++) {
+	         	suma += serie[i];
+	         }
+	         
+	         
+			alert("La serie de Fibonacci de "+ numero + " elementos es: " + serie.toString() + 
+				"\nLa suma de estos elementos es: " + suma);
+		}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 5a.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			La serie de Fibonacci es una sucesión matemática donde el primer elemento es 0, el segundo
+			es 1 y cada elemento restante es la suma de los dos anteriores, teniendo algo del estilo a:<br><br>
+			0,1,1,2,3,5,8,13,21,34,55..<br><br>
+			Genera y muestra la serie de fibonacci según el número de términos que decida el usuario y
+			muestra al final la suma de esos términos. El proceso, se estará repitiendo mientras el usuario lo
+			desee
+		</p>
+		<p align="center">
+			Introduce el numero de terminos <input type="text" id="num" size="3"/>
+			
+		</p>
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio5()"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

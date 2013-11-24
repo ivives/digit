@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="spa" lang="spa">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Ejercicios funciones</title>
+	
+<script type="text/javascript">
+ 
+
+  var mensaje = prompt("Introduce un mensaje") 
+ 
+//function Length 
+  
+
+        alert("El mensaje: -" + mensaje + "- tiene una longitud de: " + miLength(mensaje));
+        function miLength(mensaje){
+        	var longitud = 0;
+        	var men = mensaje.split("");
+        	for (var i in men) {
+			  longitud++;
+			};
+			return longitud;
+        }
+  
+
+//function Substring  
+    
+    
+       var inicio=prompt("Funcion Substring \n Introduce el indice de inicio");
+       var final=prompt("Funcion Substring \n Introduce el indice de fin");
+       alert(miSubstring(mensaje,inicio,final));
+       
+       function miSubstring(mensaje,inicio,fin){
+       	var men = mensaje.split("");
+       	var resultado = "";
+       	
+       	for(var i = inicio; i < fin; i++){
+       		resultado += men[i];
+       		
+       		}
+       	return resultado;
+       }
+  
+   
+//function Concat
+  
+  var vector1 = prompt("Introduce el primer vector");
+  var vector2 = prompt("Introduce el segundo vector");
+  
+  function miConcat(vector1, vector2){
+        		
+        		var longVector1 = 0;
+        		var longVector2 = 0;
+        		
+        		for (var i in vector1){
+        			longVector1++;
+        		}
+        		
+        		for (var i in vector2){
+        			longVector2++;
+        		}
+        		        		
+        		var longVector3 = longVector1 + longVector2;
+        		 
+        		var vector3 = new Array(longVector3);
+        		
+    			for (var i = 0; i < longVector1; i++){
+    				vector3[i] = vector1[i];
+    			}
+        		
+        		var aux = 0;
+        		for (var index = longVector1 ; index < longVector3; index++ ){
+        			vector3[index] = vector2[aux];
+        			aux++;
+        		}
+        		return vector3;
+        	}
+        	        	        	
+        	var vector3 = miConcat(vector1,vector2);
+        	
+        	alert(vector3.toString());
+
+//function CharAt
+  
+  function miCharAt(mensaje, posicion){
+        		
+        		var caracter = "";
+        		var vectorMensaje = mensaje.split("");
+        		        
+        		caracter = vectorMensaje[posicion];
+
+        		return caracter;
+        		
+        	}
+        	
+        	var posicion = prompt("Funcion charAt \n Introduce una posicion");
+        	
+        	var caracter = miCharAt(mensaje,posicion);
+        	alert(caracter);
+  
+   
+//function IndexOf
+  
+  function miIndexOf(mensaje, caracter){
+        		var posicion = 0;
+        		var longitud = miLength(mensaje);
+        		var vectorMensaje = mensaje.split("");
+        		
+        		for (var i = 0; i < longitud; i++){
+        			if (vectorMensaje[i] == caracter ){
+        				posicion = i;
+        				return posicion;
+        			}
+        		}return posicion;
+        	}
+        	
+        	var caracter = prompt("Funcion IndexOf \n Introduce un caracter");
+        	
+        	alert("La posicion de la primera " + caracter + " es: " + miIndexOf(mensaje,caracter));
+  
+    
+//function LastIndexOf
+ 
+function miLastIndexOf(mensaje, caracter){
+        		var posicion = 0;
+        		var longitud = miLength(mensaje);
+        		var vectorMensaje = mensaje.split("");
+        		
+        		for (var i = 0; i < longitud; i++){
+        			if (vectorMensaje[i] == caracter ){
+        				posicion = i;
+        				
+        			}
+        		}
+        		return posicion;
+        	}
+        	
+        	var caracter = prompt("Funcion LastIndexOf \n Introduce un caracter");
+        	        	
+        	alert("La posicion de la ultima " + caracter + " es: " + miLastIndexOf(mensaje,caracter));
+
+
+//function Reverse
+ 	 
+ 	   
+   function miReverse(mensaje){
+     		var longitud = 0;
+        	var mensajeArray = mensaje.split("");
+     		for(var i in mensajeArray){
+     			longitud++;
+     		}
+     		var textoInvertido = "";
+     		var resultado = new Array(longitud);
+     		var a = longitud-1;
+     		for(var i = 0; i < longitud; i++){
+     			resultado[a] = mensajeArray[i];
+     			a--;
+     			   			   			
+     		}
+     		
+     		for (var index in resultado) {
+				textoInvertido = textoInvertido + resultado[index];
+			}		
+			return textoInvertido;
+     	}
+     	
+  		alert("El reverse de la cadena - " + mensaje + " - es: " + miReverse(mensaje));
+  
+  //function Split 
+
+	cadena = prompt("Introduce un mensaje");
+	separador = prompt("Introduce un separador");
+
+	function miSplit(cadena, separador){	
+		var longitud=0;
+		var vector=new Array();
+		var posicion=0;
+			
+		for (var i in cadena){
+			longitud++;	
+		}
+			
+		vector[posicion]="";
+		for(var i = 0; i < longitud; i++){
+			if(cadena[i]!=separador){
+				vector[posicion]+=cadena[i];
+			}
+			else{
+				posicion++;
+				vector[posicion]="";
+			}	
+		}
+		return vector;
+	}	
+
+	var vector = miSplit(cadena, separador);
+	alert (vector.toString());	
+  
+</script>
+
+</head>
+
+<body>
+
+
+</body>
+</html>

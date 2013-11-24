@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio27b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-21 -->
+
+</head>
+<body>
+	
+	<script type="text/javascript">
+		morado = new Array(150,150,255)
+		naranja = new Array(255,99,0)
+		azul = new Array(0,0,255)
+		rojo = new Array(255,0,0)
+		amarillo = new Array(255,255,0)
+		negro = new Array(0,0,0)
+		blanco = new Array(255,255,255)
+		
+		colores = new Array(morado, naranja, azul, rojo, amarillo, negro, blanco)
+		
+		function newWindow(enlace) {
+				bookWindow = window.open(enlace, 'Ventana', 'width=400,height=400,status=yes,resizable=no,scrollbars=no')
+				bookWindow.focus()
+			}
+
+	</script>
+	
+	<h2>Ejercicio 7b.   Practica II</h2>
+	<div id="enunciado">
+		<p>
+			Teniendo en cuenta el script que simula degradados al cargar una página web, lee el artículo
+			sobre la técnica empleada <a href="http://www.desarrolloweb.com/articulos/656.php">http://www.desarrolloweb.com/articulos/656.php</a><br><br>
+			
+				a) Hacer posible que tanto los diferentes comportamientos como los pasos los pueda
+				modificar el usuario al cargar la página de este script
+				<a href="http://www.desarrolloweb.com/articulos/ejemplos/tallerjs/degradado1.html">http://www.desarrolloweb.com/articulos/ejemplos/tallerjs/degradado1.html.</a><br>
+				
+				b) Crea una archivo externo para el script anterior y vincúlalo correctamente con la página.<br>
+				
+				c) Hacer que todos los ejemplos que aparecen al final del artículo aparezcan en dos
+				ventanas, en una estarán los enlaces tal como se muestran en la página y conforme
+				haga click el usuario se mostrarán los efectos en una nueva ventana, que tendrá
+				siguientes características: nombre de la ventana degradados, Ancho 400 y Alto 400, sin
+				scroll y sin controles de ventana.<br>
+				<pre>
+				&lt; SCRIPT LANGUAGE=JAVASCRIPT TYPE="TEXT/JAVASCRIPT"&gt;
+				function newWindow(enlace) {
+				bookWindow = window.open(...)
+				bookWindow.focus()
+				}
+				&lt;/SCRIPT&gt;
+				</pre>
+		</p>
+		
+		<form  style="color:black"  action="degradado.html" method="get" onSubmit="newWindow('degradado.html')" target="Ventana" >
+			Color inicial:
+				<select name="colorIni">
+					<option value="">Elige un color</option>
+					<option value="0">Morado</option>
+					<option value="1">Naranja</option>
+					<option value="2">Azul</option>
+					<option value="3">Rojo</option>
+					<option value="4">Amarillo</option>
+					<option value="5">Negro</option>
+					<option value="6">Blanco</option>
+				</select>
+				<br><br>
+			Color final:
+				<select name="colorFin">
+					<option value="">Elige un color</option>
+					<option value="0">Morado</option>
+					<option value="1">Naranja</option>
+					<option value="2">Azul</option>
+					<option value="3">Rojo</option>
+					<option value="4">Amarillo</option>
+					<option value="5">Negro</option>
+					<option value="6">Blanco</option>
+				</select>
+				<br><br>
+			Numero de pasos para el degradado:
+				<input type="text" name="pasos" size="2">
+				<br><br>
+			Escoge el tipo degradado:
+			<br>
+				<input type="radio" name="tipo" value="1" /> Bucle infinito<br/>
+				<input type="radio" name="tipo" value="2" /> Una pasada<br/>
+				<input type="radio" name="tipo" value="3" /> Una pasada ida y vuelta<br/>
+				<input type="radio" name="tipo" value="4" /> Bucle infinito con parada
+			<br><br>	
+			<input type="submit" value="Degradado" />	
+		</form>
+		
+		
+		<p align="center"><input id="volver" type="button" value="Volver" onclick="history.go(-1)"/></p>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>formularios</title>
+        <meta name="author" content="mati" />
+        <!-- Date: 2013-11-06 -->
+        
+        <style type="text/css">
+                  fieldset{
+                        background-color:#CEE3F6;
+                        border-color:#0489B1;
+                        width:450px; 
+                }
+        </style>
+        
+        <script>
+                
+                function limita(objeto,maximoCaracteres) {
+                          
+                          if(objeto.value.length >= maximoCaracteres ) {
+                            return false;
+                          }
+                          else {
+                            return true;
+                          }
+                }
+                
+                function permite(elEvento, permitidos) {
+                  // Variables que definen los caracteres permitidos
+                  var numeros = "0123456789";
+                  var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+                  var numeros_caracteres = numeros + caracteres;
+                  var teclas_especiales = [8, 37, 39, 46];
+                  // 8 = BackSpace, 46 = Supr, 37 = flecha izquierda, 39 = flecha derecha
+                 
+                 
+                  // Seleccionar los caracteres a partir del parámetro de la función
+                  switch(permitidos) {
+                    case 'num':
+                      permitidos = numeros;
+                      break;
+                    case 'car':
+                      permitidos = caracteres;
+                      break;
+                    case 'num_car':
+                      permitidos = numeros_caracteres;
+                      break;
+                  }
+                 
+                  // Obtener la tecla pulsada 
+                  var evento = elEvento || window.event;
+                  var codigoCaracter = evento.charCode || evento.keyCode;
+                  var caracter = String.fromCharCode(codigoCaracter);
+                 
+                  // Comprobar si la tecla pulsada es alguna de las teclas especiales
+                  // (teclas de borrado y flechas horizontales)
+                  var tecla_especial = false;
+                  for(var i in teclas_especiales) {
+                    if(codigoCaracter == teclas_especiales[i]) {
+                      tecla_especial = true;
+                      break;
+                    }
+                  }
+                 
+                  // Comprobar si la tecla pulsada se encuentra en los caracteres permitidos
+                  // o si es una tecla especial
+                  return permitidos.indexOf(caracter) != -1 || tecla_especial;
+                }
+                
+                function validar(){
+                        
+                        var nom = document.getElementById("nombre");
+                        var ape = document.getElementById("apellidos");
+                        var dir = document.getElementById("direccion");
+                        var radios = document.getElementsByName("estado");
+                        var esta = "";
+                        var seleccion = "";
+                        var i;
+                        var indice = document.getElementById("opciones");
+                        
+                        
+                        if (nom.value == "") {
+                                alert("El campo nombre no puede estar vacio");
+                                nombre.focus();
+                                return false;
+                        }
+                        if (ape.value == "") {
+                                alert("El campo apellidos no puede estar vacio");
+                                apellidos.focus();
+                                return false;
+                        }
+                        if (dir.value == ""){
+                                alert("El campo direccion no puede estar vacio");
+                                direccion.focus();
+                                return false;                                
+                        }
+                                                
+                        for(i=0; i<radios.length; i++) {
+                                if (radios[i].checked){
+                                        esta = radios[i].value;
+                                }
+                        }        
+                        
+                        for (i=1; i <=5; i++){
+                                var check = document.getElementById("aficion"+i);
+                                if (check.checked){
+                                        seleccion += check.value + ",  ";
+                                }
+                        }
+                        
+                        if (seleccion == ""){
+                                alert("Debes seleccionar una aficion");
+                                return false;
+                        }
+                        
+                        if(indice == null || indice == 0){
+                                alert("Debes seleccionar una localidad")
+                                opciones.focus();
+                                return false;
+                        }
+                        
+                        // Obtener la referencia a la lista
+                        var lista = document.getElementById("opciones");
+                        // Obtener el índice de la opción que se ha seleccionado
+                        var indiceSeleccionado = lista.selectedIndex;
+                        // Con el índice y el array "options", obtener la opción seleccionada
+                        var opcionSeleccionada = lista.options[indiceSeleccionado];
+                         
+                        // Obtener el valor y el texto de la opción seleccionada
+                        var textoSeleccionado = opcionSeleccionada.text;
+                        var valorSeleccionado = opcionSeleccionada.value;
+                         
+                        alert("Nombre: " + nom.value + "\nLongitud nombre: " + nom.value.length + 
+                                "\n\nApellidos: " + ape.value + "\nLongitud apellidos: " + ape.value.length +
+                                "\n\nDireccion: " + dir.value + "\nLongitud direccion: " + dir.value.length + 
+                                "\n\nEstado civil: " + esta + "\n\nAficiones: " + seleccion +
+                                "\n\nLugar de residencia: " + textoSeleccionado + ", opcion seleccionada: " + valorSeleccionado);
+                        
+                }
+                                
+        </script>
+        
+</head>
+<body>
+<fieldset>
+                <legend>Formulario</legend>
+                <form name="datos" method="post">
+                        Nombre:<input type="text" id="nombre"  onkeypress="return limita(this,5);" onkeypress="return permite(event, 'car');"/>
+                        <br>
+                        Apellidos:<input type="text" id="apellidos" onkeypress="return permite(event, 'car');" onkeypress="return limita(this,5);"/>
+                        <br>
+                        Direccion:<textarea id="direccion" rows="1" cols="44" onkeypress="return permite(event, 'num_car')" onkeypress="return limita(this,10);"></textarea>
+                        <br>
+                        Estado civil:
+                        <br>
+                        <input type="radio" value="soltero" name="estado" id="estado_solt" /> Soltero
+                        <input type="radio" value="casado" name="estado" id="estado_casa"/> Casado
+                        <input type="radio" value="divorciado" name="estado" id="estado_divo"/> Divorciado
+                        <br>
+                        Aficiones:
+                        <br>
+                        <input type="checkbox" value="deporte" id="aficion1" /> Deporte
+                        <input type="checkbox" value="leer" id="aficion2" /> Leer
+                        <input type="checkbox" value="cine" id="aficion3" /> Cine
+                        <input type="checkbox" value="musica" id="aficion4"/> Musica
+                        <input type="checkbox" value="videojuegos" id="aficion5"/> Videojuegos
+                        <br>
+                        Localidad:
+                        <select id="opciones" name="opciones">
+                                <option value="">Selecciona una opcion</option>
+                                  <option value="1">Alicante</option>
+                                  <option value="2">Barcelona</option>
+                                 <option value="3">Bilbao</option>
+                                 <option value="4">Castellon</option>
+                                 <option value="5">Madrid</option>
+                                 <option value="6">Sevilla</option>
+                                 <option value="7">Valencia</option>
+                                 <option value="8">Zaragoza</option>
+                        </select>
+                </form>        
+                <br>
+                <input type="button" value="Validar formulario" onclick="validar();"/>
+        </fieldset>
+</body>
+</html>

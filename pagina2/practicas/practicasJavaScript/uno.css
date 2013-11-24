@@ -1,0 +1,127 @@
+body {
+	background: #c9edf9;
+	color:#0B0B61;
+	
+}
+
+#sorteo {
+	margin-left: 44%;
+}
+
+
+#ejecutar { margin-left: 45%;
+			color:#0B0B61;
+}
+
+
+
+#enunciado { background-color: #c9edf9;
+  			left: 5%; 
+  			overflow: hidden; 
+  			position: absolute; 
+  			background:url(../../images/fondo_web.jpg) no-repeat top center;
+  			background-size:cover;
+  			width: 90%;
+  			padding: 10px;
+}
+
+  			
+h1, h2 {
+	letter-spacing:10px;
+	word-spacing: 15px;
+	text-shadow: 2px 2px #FFFFFF;
+	text-align: center;
+}
+
+rojo {
+	color:#FF0000;
+}
+
+a {
+	text-decoration: none;
+	color: #0431B4;
+}
+
+p {
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-right: 20px;
+	
+}
+
+
+h3 {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+	
+}
+
+#reloj {
+	left: 35%;
+  	top: 400px;
+  	position: absolute;
+  	overflow: hidden; 
+}
+
+.form_input {
+    font-family:"Agency FB" ;
+    font-size:70px;
+    color: #FF0000;
+    background-color: #c9edf9;
+    font-weight:bold;
+    border: none;
+}   
+ 
+#hora {
+    margin-left:0%;
+    text-align: center;
+}
+ 
+#texto_contador{
+    font-family:sans-serif ;
+    font-size:15px;
+    background-color: #c9edf9;
+    text-align: left;
+    
+    
+}
+
+#texto_anuncio{
+    font-family:sans-serif ;
+    font-size:25px;
+    background-color: #c9edf9;
+    text-align: center;
+    vertical-align: top;
+}
+
+
+#menu div.barraMenu,
+#menu div.barraMenu a.botonMenu {
+font-family: sans-serif, Verdana, Arial;
+font-size: 8pt;
+color: white;
+}
+
+#menu div.barraMenu {
+text-align: left;
+}
+
+#menu div.barraMenu a.botonMenu {
+background-color: #556975;
+color: white;
+cursor: pointer;
+padding: 4px 6px 2px 5px;
+text-decoration: none;
+}
+
+#menu div.barraMenu a.botonMenu:hover {
+background-color: #637D4D;
+}
+
+#menu div.barraMenu a.botonMenu:active {
+background-color: #637D4D;
+color: black
+

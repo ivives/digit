@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio14a</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-15 -->
+	
+	<script type="text/javascript">
+		function ejercicio4(){
+			var numero = document.getElementById("num").value;
+			var resultado = 1;
+			
+			if( isNaN(numero)) {
+	      			alert("Debes introducir un numero." );
+	      			num.focus();
+				  	return false;
+				}
+			 
+			for(var i = 1; i <= numero; i ++) {
+			  resultado *= i;
+			}
+			alert("El factorial de " + numero + " es: " + resultado);
+		}
+		 
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 4a.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			El factorial de un número entero n es una operación matemática que consiste en multiplicar<br>
+			todos los factores n x (n­1) x (n­2) x ... x 1. Así, el factorial de 5 (escrito como 5!) es igual a: 5! = 5 x
+			4 x 3 x 2 x 1 = 120<br><br>
+			Utilizando la estructura for, crear un script que calcule el factorial de un número entero que el
+			usuario introducirá por teclado. Validar la entrada de que sea un número entero, en el caso de que
+			no introduzca un valor numérico adecuado, mostraremos una caja de aviso mediante alert y
+			volveremos a solicitarle un número válido<br><br>
+			El programa se estará repitiendo mientras el usuario decida continuar
+		</p>
+		<p align="center">
+			 Introduce el numero <input type="text" id="num" size="3"/>
+			
+		</p>
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio4()"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

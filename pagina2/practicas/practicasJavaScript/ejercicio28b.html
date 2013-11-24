@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio28b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-21 -->
+	
+</head>
+<body>
+	<h2>Ejercicio 8b.   Practica II</h2>
+	<div id="enunciado">
+		<p>
+			Teniendo en cuenta la tabla de colores Web que aparece en el siguiente enlace
+			<a href="http://www.desarrolloweb.com/articulos/ejemplos/tallerjs/tablacolores.html">http://www.desarrolloweb.com/articulos/ejemplos/tallerjs/tablacolores.html</a> añadirle un evento
+			“onclick” a cada celda para que al pulsar ese color se muestre una ventana emergente de 350px
+			x 400px con el color de fondo correspondiente a esa color.
+		</p>
+		
+		<h1 align="center">Tabla de colores<br>Javascript</h1>
+		<table width="70%" align="center"> 
+		<script type="text/javascript">
+		
+		var r,g,b;
+		function colores(r,g,b) {
+
+		  open('ventanaColor.html?r='+r+'&g='+g+'&b='+b,'','width=350,height=400') ;
+		}
+		
+		var r = new Array("00","33","66","99","CC","FF");
+		var g = new Array("00","33","66","99","CC","FF");
+		var b = new Array("00","33","66","99","CC","FF");
+		for (i=0;i<r.length;i++) 
+			for (j=0;j<g.length;j++) {
+				document.write("<tr>");
+				for (k=0;k<b.length;k++) {
+					var nuevoc = "#" + r[i] + g[j] + b[k];
+					var nuevor = parseInt(r[i],16)
+					var nuevog = parseInt(g[j],16)
+					var nuevob = parseInt(b[k],16)
+					document.write('<td bgcolor="' + nuevoc + '" align=center onClick="colores('+nuevor+','+nuevog+','+nuevob+')">'+nuevoc+'</td>');
+					
+				}
+				document.write("</tr>");
+			}
+		</script>
+		</table>
+				
+		<p align="center"><input id="volver" type="button" value="Volver" onclick="history.go(-1)"/></p>
+		
+	</div>
+</body>
+</html>

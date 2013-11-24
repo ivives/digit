@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="spa" lang="spa">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	
+<title>Ignacio Vives Menor</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+<script type="text/javascript">
+				
+		function countDown(repite,a,me,d,h,m,s){
+    var form=document.getElementById('form');
+    if (repite=='true'){
+ 
+    var anyo=a;
+    var mes=me-1;
+    var dia=d;
+    var hora=h;
+    var minuto=m;
+    var segundo=s;
+ 
+    var La_fecha = new Date(); 
+    var La_fecha_total = new Date(anyo,mes,dia,hora,minuto,segundo); 
+    toSecond = (La_fecha_total - La_fecha)/1000
+    toDay = parseInt(toSecond/86400);
+    toSecond=toSecond-(toDay*86400);
+    toHour = parseInt(toSecond/3600);
+    toSecond=toSecond-(toHour*3600);
+    toMinute=parseInt(toSecond/60);
+    toSecond=parseInt(toSecond-(toMinute*60));
+    }
+         
+    toSecond=toSecond-1;
+         
+         
+    if(toSecond<0)
+    {
+        toSecond=59;
+        toMinute=toMinute-1;
+    }
+    form.second.value=toSecond;
+ 
+    if(toMinute<0)
+    {
+        toMinute=59;
+        toHour=toHour-1;
+    }
+    form.minute.value=toMinute;
+ 
+         
+    if(toHour<0)
+    {   toHour=23;
+            toDay=toDay-1;
+ 	}
+    
+    form.hour.value=toHour;
+    form.day.value=toDay;
+    if(toDay<0)
+    {
+         
+        form.second.value=0;
+        form.minute.value=0;
+        form.hour.value=0;
+        form.day.value=0;
+             
+    }
+    else{
+        setTimeout("countDown('false')",1000);
+    }
+}
+
+	</script>
+
+</head>
+
+<body onload="countDown('true','2013','12','31','23','59','59')">
+<div id="pagina">
+	<div id="center">
+	<div id="cabecera">
+    	<div id="logo">Prácticas de Desarrollo de Interfaces</div>
+        
+        <div id="menu">
+            <ul>                                              
+                <li><a href="#home" title="">home</a></li>
+                <li><a href="#present" title="">Presentación</a></li>
+                <li><a href="#archivos" title="">Archivos</a></li>
+                <li><a href="mailto:ivivesdam@gmail.com">Contacto</a></li>
+            </ul>
+        </div>
+        
+        <div id="top_text">
+        <p>“Nunca confies en un ordenador que no puedas lanzar por la ventana."</p>
+        <a href="http://es.wikipedia.org/wiki/Stephen_Wozniak" target ="_blank" id="cita">-Steve Wozniak-</a>
+        </div>
+    
+  	</div>
+  
+  	<div id="panel">
+  
+  		<div id="home">
+  	
+  			
+			<div id="reloj">
+				<form id="form" name="form" align="center">
+			         
+								
+					<span id="texto_anuncio">!! Quedan para Fin de Año !!</span><br><br> 
+					<span id="texto_contador">
+						Dias &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						Horas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Minutos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Segundos</span> <br>       
+					<input type="text" size="1" class="form_input" name="day" readonly>
+						
+					<span class="hora">
+					<input type="text" size="1" class="form_input" name="hour" readonly>
+					
+					<input type="text" size="1" class="form_input" name="minute" readonly>
+							
+					<input type="text" size="1" class="form_input" name="second" readonly>
+						          
+					</span>
+					
+						         
+				</form>
+			</div>
+						
+			<h2>Esta página se ha diseñado para la presentación de prácticas de la asignatura de Desarrollo de Interfaces</h2>
+						
+			
+  	
+  		</div>
+  
+   		<div id="present">
+			<table>
+				<tr>
+					<td><h2>Ignacio Vives Menor</h2></br>
+						<h3>Técnico Superior en Desarrollo de Proyectos Ubanísticos y Operaciones Topográficas, estudio 3 años en la 
+							Escuela Técnica Superior de Ingeniería Geodésica, Cartográfica y Topográfica de la Universidad Politécnica de Valencia.</br>
+							Trabajó como Topografo en empresas del ámbito de la construcción como Ferrovial-Agromán, Arción S.A. Construcciones y Cantera del Vértice S.A.</br>
+							Actualmente en situación de paro y cursando estudios de Desarrollo de Aplicaciones Multiplataforma.</br></br>
+							E-Mail de contacto ivivesdam@gmail.com
+						</h3>	
+						
+					</td>
+				</tr>
+				
+			</table>
+			
+		</div>
+    
+    	<div id="archivos">
+    		<table id="archi">
+    			<tr>
+    				<td width="12%"><a href="#practica1" ></br> Funciones</a> </td>
+    				<td width="12%"><a href="#practica1b" ></br> Funciones boton</a> </td>
+    				<td width="12%"><a href="#practica2" ></br> Formulario</a></td>
+    				<td width="12%"><a href="#practicasjavascript" ></br> Practicas JavaScript</a></td>
+    			</tr>
+    			
+    		   		
+    		</table>
+ 		</div>
+       	
+    	<div id="practica1">
+			<table>
+				<tr>
+					<td><iframe id="codigo" src="practicas/funciones/funcionesCodigo.html"></iframe></td>
+				</tr>
+				
+			</table>
+			<a id="ejecutar" href="practicas/funciones/funciones.html" target ="_blank">Ejecutar código</a>
+		</div>
+
+    	<div id="practica1b">
+			<table>
+				<tr>
+					<td><iframe id="codigo" src="practicas/funcionesBotones/funcionesBotonesCodigo.html"></iframe></td>
+				</tr>
+				
+			</table>
+			<a id="ejecutar" href="practicas/funcionesBotones/funcionesBotones.html" target ="_blank">Ejecutar código</a>
+		</div>
+		
+		<div id="practica2">
+			<table>
+				<tr>
+					<td><iframe id="codigo" src="practicas/formulario/formularioCodigo.html"></iframe></td>
+				</tr>
+				
+			</table>
+			<a id="ejecutar" href="practicas/formulario/formularios.html" target ="_blank">Ejecutar código</a>
+		</div>
+		
+		<div id="practicasjavascript">
+			<table>
+				<tr>
+					<td><iframe id="codigo" src="practicas/practicasJavaScript/practicasCodigo.html"></iframe></td>
+				</tr>
+				
+			</table>
+			<a id="ejecutar" href="practicas/practicasJavaScript/practicas.html" target ="_blank">Ejecutar código</a>
+		</div>
+ 
+    
+  	</div>
+    
+</div>
+
+</div>
+<div id="aula">
+<a href="http://www.aulaclic.es/html/index.htm" target ="_blank"><img src="images/logo.gif"  width="80" height="50" border="0" ></a>
+</div>
+<div id="libros">
+<a href="http://www.librosweb.es" target ="_blank"><img src="images/librosweb.jpg"  width="80" height="50" border="0" ></a>	
+</div>
+
+</body>
+</html>

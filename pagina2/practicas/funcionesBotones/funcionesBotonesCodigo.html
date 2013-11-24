@@ -1,0 +1,244 @@
+<pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
+&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+	&lt;title&gt;length&lt;/title&gt;
+	&lt;meta name="author" content="Nacho" /&gt;
+	&lt;!-- Date: 2013-10-18 --&gt;
+	
+	&lt;script type="text/javascript"&gt;
+ 	  
+// Funcion Lentgth
+
+ 		function miLength(){
+ 	  		var mensaje = document.getElementById("cadena");
+ 	  		var mensajeValor = mensaje.value;
+       	 	var longitud = 0;
+        	var mensajeArray = mensajeValor.split("");
+        	for (var i in mensajeArray) {
+				longitud++;
+			};
+			
+			alert("La longitud de la cadena - " + mensajeValor + " - es: " + longitud);
+		}
+
+// Funcion Substring
+        
+		function miSubstring(){
+       		var inicio = document.getElementById("indiceInicio");
+      		var fin = document.getElementById("indiceFinal");
+       		var mensaje = document.getElementById("cadena");
+ 	  		var mensajeValor = mensaje.value;
+ 	  		var inicioValor = inicio.value;
+ 	  		var finValor = fin.value;
+       		var mensajeArray = mensajeValor.split("");
+       		var resultado = "";
+       	
+       		for(var i = inicioValor; i &lt; finValor; i++){
+       			resultado += mensajeArray[i];
+       		};
+       		
+       		alert("La cadena resultante es: " + resultado);
+       }
+
+// Funcion Concat
+
+		function miConcat(){
+        		
+        	var vecUno = document.getElementById("vectorUno");
+      		var vecDos = document.getElementById("vectorDos");
+       		var vecUnoValor = vecUno.value;
+ 	  		var vecDosValor = vecDos.value;
+       		var vecUnoArray = vecUnoValor.split("");
+       		var vecDosArray = vecDosValor.split("");
+       		var resultado = "";
+        		
+        	var longVecUno = 0;
+        	var longVecDos = 0;
+        		
+        	for (var i in vecUnoArray){
+        		longVecUno++;
+        	}
+        		
+        	for (var i in vecDosArray){
+        		longVecDos++;
+        	}
+        		        		
+        	var longAux = longVecUno + longVecDos;
+        		 
+        	var vecTres = new Array(longAux);
+        		
+    		for (var i = 0; i &lt; longVecUno; i++){
+    			vecTres[i] = vecUnoArray[i];
+    		}
+        		
+        	var aux = 0;
+        	for (var index = longVecUno ; index &lt; longAux; index++ ){
+        		vecTres[index] = vecDosArray[aux];
+        		aux++;
+        	}
+        	
+        	alert(vecTres.toString());
+        }
+
+// Funcion CharAt
+
+		function miCharAt(){
+        	var indice = document.getElementById("indice");
+       		var mensaje = document.getElementById("cadena");
+       		var posicion = indice.value;
+       		var mensajeValor = mensaje.value;	
+        	var caracter = "";
+        	var mensajeArray = mensajeValor.split("");
+
+       		caracter = mensajeArray[posicion];
+
+      		alert("El caracter de la posicion " + posicion + " es " + caracter);
+    	}
+
+// Funcion IndexOf
+
+		function miIndexOf(){
+       		var caracter = document.getElementById("caracter");
+   	 		var mensaje = document.getElementById("cadena");
+    		var caracterValor = caracter.value;
+    		var mensajeValor = mensaje.value;
+       		var posicion = 0;
+       		var longitud = mensajeValor.length;
+			var mensajeArray = mensajeValor.split("");
+        		
+       		for (var i = 0; i &lt; longitud; i++){
+       			if (mensajeArray[i] == caracterValor ){
+       				posicion = i;
+       				alert("La posicion de la primera - " + caracterValor + " - es: " + posicion);
+       				return;
+       			}
+       		}
+    	}
+
+// Funcion LastIndexOf
+
+		function miLastIndexOf(){
+  			var caracter2 = document.getElementById("caracter2");
+       		var mensaje = document.getElementById("cadena");
+       		var caracter2Valor = caracter2.value;
+       		var mensajeValor = mensaje.value;
+        	var posicion = 0;
+        	var longitud = mensajeValor.length;
+			var mensajeArray = mensajeValor.split("");
+        		
+       	 	for (var i = 0; i &lt; longitud; i++){
+        		if (mensajeArray[i] == caracter2Valor ){
+        			posicion = i;
+        		}
+        	}
+       		alert("La posicion de la ultima - " + caracter2Valor + " - es: " + posicion);
+        	return;
+   		 }
+
+// Funcion Reverse
+
+		function miReverse(){
+			
+			var mensaje = document.getElementById("cadena");
+ 	  		var mensajeValor = mensaje.value;
+        	var longitud = 0;
+        	var mensajeArray = mensajeValor.split("");
+     		for(var i in mensajeArray){
+     			longitud++;
+     		}
+     		var textoInvertido = "";
+     		var resultado = new Array(longitud);
+     		var a = longitud-1;
+     		for(var i = 0; i &lt; longitud; i++){
+     			resultado[a] = mensajeArray[i];
+     			a--;
+     			   			   			
+     		}
+     		
+     		for (var index in resultado) {
+				textoInvertido = textoInvertido + resultado[index];
+			}		
+			alert("El reverse de la cadena - " + mensajeValor + " - es: " + textoInvertido)
+     	}
+
+//function Split 
+	
+	function miSplit(cadena, separador){	
+
+ 		cadena=document.getElementById("caden");
+		cadena=cadena.value;
+		separador=document.getElementById("separador");
+		separador=separador.value;
+		var longitud=0;
+		var vector=new Array();
+		var posicion=0;
+		
+		for (var i in cadena){
+			longitud++;	
+		}
+			
+		vector[posicion]="";
+		for(var i = 0; i &lt; longitud; i++){
+			if(cadena[i]!=separador){
+				vector[posicion]+=cadena[i];
+			}
+			else{
+				posicion++;
+				vector[posicion]="";
+			}	
+		}
+		alert (vector.toString());
+
+	}	
+	
+	&lt;/script&gt;
+	
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;Funcion length&lt;/p&gt;
+	Introduce una cadena
+	&lt;input type="text" id="cadena"/&gt;
+	&lt;input type="button" value="Aceptar length" onclick="miLength();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion substring&lt;/p&gt;	
+	Introduce el indice de inicio
+	&lt;input type="text" id="indiceInicio"/&gt;
+	Introduce el indice final
+	&lt;input type="text" id="indiceFinal"/&gt;
+	&lt;input type="button" value="Aceptar substring" onclick="miSubstring();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion concat&lt;/p&gt;
+	Introduce el primer array
+	&lt;input type="text" id="vectorUno"/&gt;
+	Introduce el segundo array
+	&lt;input type="text" id="vectorDos"/&gt;
+	&lt;input type="button" value="Aceptar concat" onclick="miConcat();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion charAt&lt;/p&gt;
+	Introduce el indice de una posicion
+	&lt;input type="text" id="indice"/&gt;
+	&lt;input type="button" value="Aceptar charAt" onclick="miCharAt();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion indexOf&lt;/p&gt;
+	Introduce un caracter
+	&lt;input type="text" id="caracter"/&gt;
+	&lt;input type="button" value="Aceptar indexOf" onclick="miIndexOf();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion lastIndexOf&lt;/p&gt;
+	Introduce un caracter
+	&lt;input type="text" id="caracter2"/&gt;
+	&lt;input type="button" value="Aceptar lastIndexOf" onclick="miLastIndexOf();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion reverse&lt;/p&gt;
+	&lt;input type="button" value="Aceptar reverse" onclick="miReverse();"/&gt;
+	&lt;br&gt;
+	&lt;p&gt;Funcion split&lt;/p&gt;
+	Introduce una cadena
+	&lt;input type="text" id="caden"/&gt;
+	Introduce un separador
+	&lt;input type="text" id="separador"/&gt;	
+	&lt;input type="button" value="Aceptar split" onclick="miSplit()"/&gt;
+</pre>

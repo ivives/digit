@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio15b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-19 -->
+	
+	<script type="text/javascript">
+		function crea(){
+			var i;
+			var j;
+			var serie = new Array();
+			var serieDesordenada = new Array();
+			var colores = ["red","blue","magenta","yellow","gray","chocolate","greenyellow","chartreuse","green","pink","cian","beige","coral","gold","lime","orange","silver","tomato","moccasin"];
+			for (i = 0; i < 15; i++) {
+			serie[i]=  Math.round(Math.random()*99);
+			}
+	        
+	       	for (i = 0; i < 15; i++){
+	       		serieDesordenada[i] = serie[i];
+	       	}
+	         
+	        for (i = 1; i<serie.length; i++) {
+				
+        		for(j = 0; j < serie.length-1; j++) {
+        			
+                	if (serie[j] > serie[j+1]) {
+    	               var aux = serie[j];
+	    	           serie[j]= serie[j+1];
+            	       serie[j+1]= aux;
+            	    }
+       			 }
+			}
+			
+			
+			
+			document.write("<table align='center' border='2' cellspacing='6' cellpadding='8'><tr>");
+			
+			for(i = 0; i < serie.length; i++) {
+				document.write("<td style='color:red'>" + serie[i] + "</td>");
+			}
+			
+			document.write("</tr></table><br/>");
+		
+		
+		
+			document.write("<table align='center' border='3' cellspacing='5' cellpadding='10'><tr bgcolor="+ colores[Math.round(Math.random()*colores.length)] +">");
+			
+			for(i = 0; i < serieDesordenada.length; i++) {
+				document.write("<td>" + serieDesordenada[i] + "</td>");
+				
+				if((i+1)%5==0 && i!=(serieDesordenada.length-1)) {
+					document.write("</tr><tr bgcolor="+ colores[Math.round(Math.random()*colores.length)] +">");
+				}
+			}
+			
+			document.write("</tr></table><br/>");	
+		
+		}
+		
+		
+
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 5b.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			Crear una Array con 15 valores numéricos:<br>
+			● Ordenar el vector por el método de la burbuja<br>
+			● Mostrar los elementos del vector ordenados mediante una tabla de 1 Fila por 15 columnas<br>
+			● (con border, cellspacing y cellpading al menos mayor que 1)<br>
+			● Mostrar los elementos del Array sin ordenar mediante una tabla de 3 filas y 5 columnas.<br>
+			Tener en cuenta que el color de fondo de cada fila será diferente.<br><br>
+		</p>
+		<script>
+			crea();
+			
+		</script>
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="document.location.reload();"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

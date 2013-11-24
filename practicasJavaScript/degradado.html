@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+	
+	<title>ejercicio27b degradado</title>
+	
+	<!-- Date: 2013-11-21 -->
+
+	<script type="text/javascript">
+		morado = new Array(150,150,255)
+		naranja = new Array(255,99,0)
+		azul = new Array(0,0,255)
+		rojo = new Array(255,0,0)
+		amarillo = new Array(255,255,0)
+		negro = new Array(0,0,0)
+		blanco = new Array(255,255,255)
+		
+		colores = new Array(morado, naranja, azul, rojo, amarillo, negro, blanco)
+		
+		function leer(){
+	        var cadGET = location.search.substr(1,location.search.length);
+	        var arrGET = cadGET.split("&");
+	        var asocGET = new Array();
+	        var variable = "";
+	        var valor = "";
+	        for(i=0; i< arrGET.length;i++){
+	          var aux = arrGET[i].split("=");
+	          variable = aux[0];
+	          valor = aux[1];
+	          asocGET[variable] = valor;
+	        }
+	        return asocGET;
+	      } 
+	</script>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		var arrayForm = leer();
+		
+		
+		if(colores[arrayForm['colorIni']] != null) {
+			color_inicio = colores[arrayForm['colorIni']]
+		}
+		else {
+			color_inicio = colores[0]
+		}
+		
+		if(colores[arrayForm['colorFin']] != null) {
+			color_fin = colores[arrayForm['colorFin']]
+		}
+		else {
+			color_fin = colores[1]
+		}
+		
+		if(arrayForm['pasos'] != '') {
+			pasos = arrayForm['pasos']
+		}
+		else {
+			pasos = 50
+		}
+		
+		if(arrayForm['tipo'] != null) {
+			var_aux = arrayForm['tipo']
+			comportamiento = parseInt(var_aux)
+		}
+		else {
+			comportamiento = 1
+		}
+		
+		hexadecimal = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F")
+		var iteracion = 0
+		var color_actual = new Array(3)
+		
+		diferencia = new Array(3)
+		for (i=0;i<3;i++) 
+			diferencia[i] = (color_fin[i] - color_inicio[i]) / pasos
+		
+		function convierteHexadecimal(num){
+			
+			var hexaDec = Math.floor(num/16)
+			var hexaUni = num - (hexaDec * 16)
+			return hexadecimal[hexaDec] + hexadecimal[hexaUni]
+		}
+		
+		function degradado(){
+			iteracion += 1
+			
+			if (iteracion < pasos) {
+				
+				for (i=0;i<3;i++)
+					color_actual[i] = (iteracion * diferencia[i]) + color_inicio[i]
+			}else{
+				
+				for (i=0;i<3;i++)
+					color_actual[i] = color_fin[i] - ((iteracion - pasos) * diferencia[i])
+			}
+						
+			document.bgColor = convierteHexadecimal(Math.round(color_actual[0])) + convierteHexadecimal(Math.round(color_actual[1])) + convierteHexadecimal(Math.round(color_actual[2]))
+						
+			switch (comportamiento){
+				case 1:
+					if (iteracion == pasos * 2)
+						iteracion = 0
+					setTimeout("degradado()",1)
+					break;
+				case 2:
+					if(iteracion < pasos)
+						setTimeout("degradado()",1)
+					break;
+				case 3:
+					if(iteracion < pasos * 2)
+						setTimeout("degradado()",1)
+					break;
+				case 4:
+					if (iteracion == pasos * 2){
+						iteracion = 0
+						setTimeout("degradado()",10000)
+					}else{
+						setTimeout("degradado()",1)
+					}
+					break;
+			}
+		}
+		
+		degradado()
+	</script>
+
+ 
+<p align="center"><input type="button" value="Cerrar" onclick="window.close();"></p>
+</body>
+</html>

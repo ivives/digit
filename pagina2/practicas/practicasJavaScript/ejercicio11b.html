@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio11b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-18 -->
+	
+	<script type="text/javascript">
+		function ejercicio1(){
+			var numero = document.getElementById("num").value;
+	        
+	        if( isNaN(numero)) {
+	      			alert("Debes introducir un numero." );
+	      			num.focus();
+				  	return false;
+				}
+			
+			 if(numero%2 != 0){
+			    alert("El numero " + numero + " es impar"); 
+			  }
+			  else{
+			    alert("El numero " + numero + " es par");
+			  }
+		
+		}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 1b.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve
+			como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el
+			resultado devuelto por la función.<br><br>
+		</p>
+		<p align="center">
+			Introduce un numero <input type="text" id="num" size="3"/>
+			
+		</p>
+		<br>
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio1()"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

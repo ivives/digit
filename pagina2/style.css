@@ -1,0 +1,234 @@
+body {
+background:url(images/bg.gif) repeat-x top #c9edf9;
+margin:0px;
+padding:0px;
+font: 15px  verdana, arial, helvetica;
+color:#000;
+}
+p{
+text-align:justify;
+line-height:15px;
+padding:0px 0 5px 0;
+}
+
+
+#pagina{
+width:900px;
+height:auto;
+margin:auto;
+background:url(images/header_bg.jpg) no-repeat top center;
+}
+#center{
+width:865px;
+padding:0px;
+margin:auto;
+}
+#cabecera{
+width:865px;
+height:268px;
+margin:auto;
+}
+#logo{
+padding:17px 0 0 5px;
+float:left;
+color:#0B0B61;
+font-family:Arial, Helvetica, sans-serif;
+font-size:40px;
+font-style:italic;
+font-weight:bold;
+text-shadow: 2px 2px #FFFFFF;
+}
+#top_text{
+width:315px;
+clear:both;
+float:left;
+padding:55px 0 0 30px;
+color:#FFFFFF;
+}
+#cita{
+float:right;
+padding:0px;
+color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-style:italic;
+font-weight:bold;
+text-decoration:none;
+}
+/*----------------------menu-------------------------*/
+#menu{
+float:right;
+padding:35px 30px 0 0;
+}
+#menu ul{
+list-style:none;padding:0px;margin:0px;display:block;
+}
+#menu ul li{
+list-style:none;display:inline;float:left;width:auto;padding:0px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; font-style:italic;
+}
+#menu ul li a{
+float:left;text-decoration:none;padding:0px 4px 0 4px; margin:0px 8px 0 8px;color:#fff;text-align:center;
+}
+#menu ul li a:hover{
+text-decoration:none;color: #fff; border-bottom:3px #FFFFFF solid;
+}
+#menu ul li a.current{
+float:left;text-decoration:none;padding:0px 4px 0 4px;color: #fff;margin:0px 8px 0 8px; border-bottom:3px #FFFFFF solid;
+}
+
+
+
+/*-----------------panel----------------------------*/
+
+
+
+div#panel { background-color: #FFFFFF;
+  			height: 450px;
+  			left: 5%; 
+  			overflow: hidden; 
+  			position: absolute; 
+  			background:url(images/fondo_web.jpg) no-repeat top center;
+  			background-size:cover;
+  			width: 90%; 
+		}
+
+div#panel div { height: 510px; 
+  				overflow: auto; 
+  				width: 100%; 
+			}	
+
+div#aula{	height: 100px;
+  			left: 5%;
+  			top: 730px;
+  			overflow: hidden; 
+  			position: absolute; 
+  			width: 100px; }
+
+div#libros{	height: 100px;
+  			left: 170px;
+  			top: 730px;
+  			overflow: hidden; 
+  			position: absolute; 
+  			width: 100px; }
+
+
+h2 { text-align: center;
+	 font-size:30px;} 
+
+h3 {text-align: center;
+	 font-size:15px;}
+
+table { border: none;
+		border-color: #000000;
+		position:relative ;
+		left: 0%;
+		top: 0%;
+		width:100%;
+		height:420px;
+		}
+		 
+td {width:50%;
+		height:420px;}	
+		
+table#archi { border: none;
+		border-color: #000000;
+		position:relative ;
+		left: 0%;
+		top: 0%;
+		width:100%;
+		height:450px;
+		}
+
+#archi tr{ list-style:none;
+		padding:0px;
+		margin:0px;
+		display:block;
+}
+#archi tr td{ list-style:none;
+		display:inline;
+		float:left;
+		width:auto;
+		padding:0px;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:13px;
+		font-weight:bold;
+		font-style:italic;
+}
+
+#archi tr td a{ float:left;
+		text-decoration:none;
+		padding:0px 4px 0 4px;
+		margin:0px 8px 0 8px;
+		color:#0B0B61;
+		text-align:center;
+}
+#archi tr td a:hover{ text-decoration:none;
+				color: #fff; #0B0B61 solid;
+}
+
+#ejecutar { text-decoration: none;
+			top:430px;
+			margin-left: 45%;
+			color:#0B0B61;
+	
+}
+
+table#archi td {width:10%;
+		height:50px;}	
+		
+iframe#codigo { position:relative ;
+				left: 0%;
+				top: 0%;
+				width:100%;
+				height:100%; 
+        		background-color: #FFFFFF;
+        		color:#000000;
+        		border: none;} 
+        		
+#reloj {
+	
+  	position: absolute;
+  	left:auto;
+  	top:180px;
+  	overflow: hidden;
+  	 
+}
+
+form {
+	text-align: center;
+}
+
+.form_input {
+    font-family:"Agency FB" ;
+    font-size:70px;
+    color: #FF0000;
+    background:transparent;
+    font-weight:bold;
+    border:none;
+    
+}   
+ 
+#hora {
+    margin-left:0%;
+    text-align: center;
+}
+ 
+#texto_contador{
+    font-family:sans-serif ;
+    font-size:15px;
+    background:transparent;
+    text-align: left;
+}
+
+#texto_anuncio{
+    font-family:sans-serif ;
+    font-size:25px;
+    background:transparent;
+    text-align: center;
+    vertical-align: top;
+}
+  
+					 
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>charAt</title>
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-10-18 -->
+	
+	<script type="text/javascript">
+		
+		function miCharAt(){
+        	var indice = document.getElementById("indice");
+       		var mensaje = document.getElementById("cadena");
+       		var posicion = indice.value;
+       		var mensajeValor = mensaje.value;	
+        	var caracter = "";
+        	var mensajeArray = mensajeValor.split("");
+
+       		caracter = mensajeArray[posicion];
+
+       		alert("El caracter de la posicion " + posicion + " es " + caracter);
+       	}
+         		
+	</script>
+	
+</head>
+<body>
+
+		<p>Introduce una cadena de texto</p>
+		<input type="text" id="cadena"/>
+		<p>Introduce el indice de una posicion</p>
+		<input type="text" id="indice"/>
+		<input type="button" value="Aceptar charAt" onclick="miCharAt();"/>
+
+</body>
+</html>
+

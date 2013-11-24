@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Ejercicio 6 - Calculo de la letra del DNI </title>
+	
+	
+<script type="text/javascript">
+	var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+	
+	var dniCompleto = prompt("Introduce tu DNI"); 
+	
+	var numero = dniCompleto.substring(0,8);
+	var letra = dniCompleto.substring(8);
+	
+	
+	parseInt(numero);
+	
+	
+	letra.toUpperCase;
+	
+	//alert(numero);
+	//alert(letra);
+	
+	if (numero < 1 || numero > 99999999){
+		
+		alert("El numero no es válido");
+	
+	} else {
+		
+		var letraCalculada = letras[numero % 23];   //HAY QUE TENER CUIDADO PORQUE SE DEBE PARSEAR PARA OPERAR
+		
+		if (letraCalculada != letra){
+			alert ("La letra o el numero no son correctos.");
+			
+		} else {
+			
+			alert("Dni correcto.");
+		}
+		
+	}
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio12b</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-19 -->
+	
+	<script type="text/javascript">
+		function ejercicio2(){
+			
+			var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+			
+			var numer = document.getElementById("num").value;
+			var letr = document.getElementById("let").value;
+				
+			if( isNaN(numer)) {
+	      			alert("Debes introducir un numero." );
+	      			num.focus();
+				  	return false;
+				}
+				
+			if( !isNaN(letr)) {
+	      			alert("Debes introducir una letra." );
+	      			let.focus();
+				  	return false;
+				}	
+												
+			var numero = parseInt(numer);
+			var letra = letr.toUpperCase();
+			
+			if (numero < 1 || numero > 99999999){
+				alert("El numero no es válido");
+				num.focus();
+			}
+				
+				var letraCalculada = letras[numero % 23];
+				
+				if (letraCalculada != letra){
+					alert ("La letra no es correcta.");
+					let.focus();
+				} else{
+					alert("El DNI es correcto");
+				}
+				
+			
+		
+		}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 2b.   Practica I</h2>
+	<div id="enunciado">
+		<p>
+			El cálculo de la letra del Documento Nacional de Identidad (DNI) es un proceso matemático
+			sencillo que se basa en obtener el resto de la división entera del número de DNI y el número 23. A
+			partir del resto de la división, se obtiene la letra seleccionándola dentro de un array de letras.
+			Por tanto si el resto de la división es 0, la letra del DNI es la T y si el resto es 3 la letra es la A.<br><br>
+			La secuencia de letras es la siguiente y en este orden<br><br>
+			
+			'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'<br><br>
+			Con estos datos, elaborar un pequeño script que:<br><br>
+			1. Almacene en una variable el número de DNI indicado por el usuario y en otra variable la letra
+			del DNI que se ha indicado. (Pista: si se quiere pedir directamente al usuario que indique su
+			número y su letra, se puede utilizar la función prompt())<br><br>
+			2. En primer lugar (y en una sola instrucción) se debe comprobar si el número es menor que 0
+			o mayor que 99999999. Si ese es el caso, se muestra un mensaje al usuario indicando que
+			el número proporcionado no es válido y el programa no muestra más mensajes.<br><br>
+			3. Si el número es válido, se calcula la letra que le corresponde según el método explicado
+			anteriormente.<br><br>
+			4. Una vez calculada la letra, se debe comparar con la letra indicada por el usuario. Si no
+			coinciden, se muestra un mensaje al usuario diciéndole que la letra que ha indicado no es
+			correcta. En otro caso, se muestra un mensaje indicando que el número y la letra de DNI
+			son correctos.
+		</p>
+		
+		<p align="center">
+			Introduce el <b>numero</b> del DNI <input type="text" id="num" maxlength="8" size="5"/>
+			Introduce la <b>letra</b> del DNI <input type="text" id="let" maxlength="1" size="3"/>
+		</p>
+		
+		<input id="ejecutar" type="button" value="Resultado" onclick="ejercicio2()"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>

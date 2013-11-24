@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio33</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-22 -->
+	
+	<script type="text/javascript">
+		var cuenta ="";
+		var contra ="";		
+		function crear(){
+			// Crear cuenta de correo
+			cuenta = document.getElementById("direccion").value;
+			contra = document.getElementById("contraseña").value;
+		
+			
+			var espacios = false;
+			var cont = 0;
+			
+			cuen = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    		if ( !cuen.test(cuenta) ){
+        		alert("Error: La dirección de correo " + cuenta + " es incorrecta.");
+        		direccion.focus();
+        		return false;
+			}
+						
+			while (!espacios && (cont < contra.length)) {
+			  if (contra.charAt(cont) == " ")
+			    espacios = true;
+			  cont++;
+			}
+			 
+			if (espacios) {
+			  alert ("La contraseña no puede contener espacios en blanco");
+			  contraseña.focus();
+			  return false;
+			}
+			
+			if (contra.length == 0) {
+			  alert("El campo contraseña no puede estar vacio");
+			  contraseña.focus();
+			  return false;
+			
+			}else {
+				alert("Cuenta creada correctamente");
+			}
+			
+		}
+		
+		
+		function validar(){
+						
+			//Cambiar contraseña de la cuenta
+					
+			var email = document.getElementById("dir").value;
+			expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    		if ( !expr.test(email) ){
+        		alert("Error: La dirección de correo " + email + " es incorrecta.");
+        		dir.focus();
+        		return false;
+			}
+			
+			var p0 = document.getElementById("vieja").value;
+			if (p0.length == 0) {
+			  alert("La contraseña no es valida");
+			  vieja.focus();
+			  return false;
+			}
+			
+			if (p0 != contra || email != cuenta){
+				alert("La direccion de correo o la contraseña no son validas")
+				dir.focus();
+				return false;
+			}
+			
+			
+			var p1 = document.getElementById("nueva").value;
+			var p2 = document.getElementById("repite").value;
+			
+			var espacios = false;
+			var cont = 0;
+			
+			 while (!espacios && (cont < p1.length)) {
+			  if (p1.charAt(cont) == " ")
+			    espacios = true;
+			  cont++;
+			}
+			 
+			if (espacios) {
+			  alert ("La contraseña no puede contener espacios en blanco");
+			  nueva.focus();
+			  return false;
+			}
+			
+			if (p1.length == 0 || p2.length == 0) {
+			  alert("Los campos de la contraseña nueva no pueden estar vacios");
+			  nueva.focus();
+			  return false;
+			}
+			
+			if (p1 != p2) {
+			  alert("Las contraseñas deben de coincidir");
+			  nueva.focus();
+			  return false;
+			} else {
+			  contra = p1;
+			  
+			  alert("Todo esta correcto \nDireccion de correo: " + email + "\nContraseña: " + contra);
+			  
+			  return true; 
+			}
+			
+		 }
+		 
+		 
+		 
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 3.   Practica III</h2>
+	<div id="enunciado">
+		<p>
+			Se trata, de crear un formulario que nos permita modificar la contraseña de
+			una cuenta de correo teniendo en cuenta que tendremos que llevar a cabo ciertas
+			validaciones, a la vez que tendremos que mostrar mensajes dependiendo del evento y
+			circunstancias que concurran en cada caso.
+			
+		</p>
+					
+			<table class="formulario"  width="100%">
+				<tr align="center">
+					<td width="20%"> </td>
+					<td><u>Cuenta de correo electronico</u></td>
+					<td><u>Cambio de contraseña de correo</u></td>
+					<td width="20%"> </td>
+				</tr>
+				
+				<tr valign="top" align="center">
+					<td> </td>
+					<td width="30%">
+					 <form name="correo" method="post" >
+	                        Direccion de correo electronico:&nbsp;<input type="email" id="direccion"/>
+	                        <br>
+	                        Contraseña:&nbsp;<input type="text" id="contraseña"/>
+	                 </form>
+					</td>
+					 <td width="30%">
+					 <form name="datos" method="post" >
+	                        Direccion de correo electronico:&nbsp;<input type="email" id="dir"/>
+	                        <br>
+	                        Contraseña antigüa:&nbsp;<input type="text" id="vieja"/>
+	                        <br>
+	                        Contraseña nueva:&nbsp;<input type="text" id="nueva"/>
+	                        <br>
+	                        Repite contraseña nueva:&nbsp;<input type="text" id="repite"/>
+					</form>
+					</td>
+					<td> </td>
+				</tr>
+				<tr align="center">
+					<td> </td>
+					<td><input id="crea" type="button" value="Crear" onclick="crear()"/></td>
+					<td><input id="valida" type="button" value="Validar" onclick="validar()"/></td>
+					<td> </td>
+				</tr>	
+			</table>		
+		<p align="center">
+			<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+		</p>
+		
+		
+		
+	</div>
+</body>
+</html>

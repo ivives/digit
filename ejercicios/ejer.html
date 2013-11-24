@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejer</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-10-16 -->
+	
+	<script>
+		
+		function llamada(){
+			var nombre = document.getElementById("nombre");
+			alert("El valor del campo de texto nombre es: " + nombre.value);
+		}
+		
+		function copia () {
+		  var camponombre = document.getElementById("nombre");
+		  var campoapellido = document.getElementById("apellidos");
+		  campoapellido.value = camponombre.value;
+		}
+		
+		
+	</script>
+	
+	
+</head>
+<body>
+	<script>
+		window.status="Mi primera pagina javaScript";
+		document.write("La resolucion de la pantalla es: " + screen.width + "x" + screen.height + "<br>");
+		document.write(" el navegador utilizado es: " + navigator.appName + "<br>");
+		document.write("la version del navegador utilizado es: " + navigator.appVersion + "<br>");
+		document.write("el navegador utilizado es: " + navigator.platform + "<br>");
+		
+//		window.open("http://www.google.es", "mi_ventana" , "toolbar=no, resizable=no, location=no, width=500, height=500");
+	</script>
+	
+	<input type="button" value="Atras" onclick="window.location='http://www.terra.es'">
+	<input type="button" value="Actualizar" onclick="window.location.reload();">
+	<input type="button" value="Copiar" onclick="copia();">
+	<input type="button" value="Mostrar nombre" onclick="llamada();">
+	<input type="text" id="nombre">
+	<input type="text" id="apellidos" >
+
+</body>
+</html>
+

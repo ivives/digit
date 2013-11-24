@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>eventos1</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-11-04 -->
+	
+<script>	
+
+function resalta(elEvento) {
+  var evento = elEvento || window.event;
+  switch(evento.type) {
+    case 'mouseover':
+      this.style.borderColor = 'black';
+      break;
+    case 'mouseout':
+      this.style.borderColor = 'silver';
+      break;
+  }
+}
+ 
+
+
+function manejador(elEvento) {
+  var evento = elEvento || window.event;
+  var caracter = evento.charCode || evento.keyCode;
+  alert("El carácter pulsado es: " + String.fromCharCode(caracter));
+}
+ 
+ 
+ 
+window.onload = function() {
+  document.getElementById("seccion").onmouseover = resalta;
+  document.getElementById("seccion").onmouseout = resalta;
+  document.onkeypress = manejador;
+}
+ 
+ 
+ 
+</script> 
+ 
+	
+</head>
+<body>
+	
+	<div id="seccion" style="width:150px; height:60px; border:thin solid silver">
+  		Sección de contenidos...
+	</div>
+
+</body>
+</html>
+

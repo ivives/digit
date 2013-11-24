@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fechayhora</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-11-18 -->
+	
+	<script>
+		function muestraReloj(){
+			var fechaHora = new Date();
+			var horas = fechaHora.getHours();
+			var minutos = fechaHora.getMinutes();
+			var segundos = fechaHora.getSeconds();
+			 
+			var sufijo = ' am';
+			if(horas > 12) {
+			  horas = horas - 12;
+			  sufijo = ' pm';
+			}
+			 
+			if(horas < 10) { horas = '0' + horas; }
+			if(minutos < 10) { minutos = '0' + minutos; }
+			if(segundos < 10) { segundos = '0' + segundos; }
+			 
+			document.getElementById("reloj").innerHTML = horas+':'+minutos+':'+segundos+sufijo;
+		}
+		setInterval(muestraReloj, 1000);
+	</script>
+	
+</head>
+<body>
+	<div id="reloj" />
+	
+		
+		
+</body>
+</html>
+

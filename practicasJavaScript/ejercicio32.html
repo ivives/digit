@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ejercicio32</title>
+	<link rel="stylesheet" type="text/css" href="uno.css" media="screen" />
+	<meta name="author" content="Nacho" />
+	<!-- Date: 2013-11-23 -->
+	
+	<script>
+		function enlace(){
+			var nombreMostrado = prompt("Introduce el nombre para el enlace");
+			var web = prompt("Introduce la direccion web");
+			
+			var a = document.getElementById('barra');
+	
+			a.innerHTML += "<a class='botonMenu' target='iframe' href='http://"+ web +"' >"+ nombreMostrado +"</a> ";
+			
+		 }
+		 
+	</script>
+	
+</head>
+<body>
+	<h2>Ejercicio 2.   Practica III</h2>
+	<div id="enunciado">
+		
+		<div id="menu">
+			<div class="barraMenu" id="barra">
+				<a class="botonMenu" target="iframe" href="ejercicio11a.html">Ejercicio 1a Practica I</a>
+				<a class="botonMenu" target="iframe" href="ejercicio11b.html">Ejercicio 1b Practica I</a>
+				<a class="botonMenu" target="iframe" href="ejercicio21a.html">Ejercicio 1a Practica II</a>
+			</div>
+		</div>
+		
+		<p>
+			Diseña una página con una estructura de menús tipo cabecera tipo:
+			<a href="http://www.desarrolloweb.com/articulos/ejemplos/css/menu.html">http://www.desarrolloweb.com/articulos/ejemplos/css/menu.html</a> ,
+			<a href="http://www.buayacorp.com/files/design/menuhorizontalcss.html" >http://www.buayacorp.com/files/design/menuhorizontalcss.html</a>
+			o cualquier otro modelo que sea en horizontal pero que esté perfectamente estructurado y
+			escrito en css para poder acceder mediante las propiedades y métodos del DOM<br><br>
+			
+				a) Añadir tres enlaces para que se muestre en un iframe centrado tres prácticas
+				cualesquiera de las que llevas hecha desde el inicio de curso.<br>
+				
+				b) Ampliar los enlaces del menú anterior de forma dinámica, pidiéndole al usuario
+				direcciones web externas. Este proceso se estará haciendo mientras el usuario lo
+				desee y se hará dentro de una capa situada por debajo del menú y por encima del
+				iframe. Cuando el usuario termine de introducir direcciones web se ocultará la capa y
+				mostrará en su lugar [+añadir hiperenlaces]
+			
+		</p>
+		
+		<p align="center">
+			<iframe  name="iframe" width="90%" height="400px" frameborder="no"></iframe>
+		</p>
+		
+		
+		<input id="ejecutar" type="button" value="Nuevo enlace" onclick="enlace()"/>
+		<input id="volver" type="button" value="Volver" onclick="history.go(-1)"/>
+	</div>
+</body>
+</html>
