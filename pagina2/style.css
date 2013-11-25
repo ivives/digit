@@ -1,64 +1,63 @@
 body {
-background:url(images/bg.gif) repeat-x top #c9edf9;
-margin:0px;
-padding:0px;
-font: 15px  verdana, arial, helvetica;
-color:#000;
+	background:url(images/bg.gif) repeat-x top #c9edf9;
+	margin:0px;
+	padding:0px;
+	font: 15px  verdana, arial, helvetica;
+	color:#000;
 }
 p{
-text-align:justify;
-line-height:15px;
-padding:0px 0 5px 0;
+	text-align:justify;
+	line-height:15px;
+	padding:0px 0 5px 0;
 }
-
 
 #pagina{
-width:900px;
-height:auto;
-margin:auto;
-background:url(images/header_bg.jpg) no-repeat top center;
+	width:900px;
+	height:auto;
+	margin:auto;
+	background:url(images/header_bg.jpg) no-repeat top center;
 }
 #center{
-width:865px;
-padding:0px;
-margin:auto;
+	width:865px;
+	padding:0px;
+	margin:auto;
 }
 #cabecera{
-width:865px;
-height:268px;
-margin:auto;
+	width:865px;
+	height:268px;
+	margin:auto;
 }
 #logo{
-padding:17px 0 0 5px;
-float:left;
-color:#0B0B61;
-font-family:Arial, Helvetica, sans-serif;
-font-size:40px;
-font-style:italic;
-font-weight:bold;
-text-shadow: 2px 2px #FFFFFF;
+	padding:17px 0 0 5px;
+	float:left;
+	color:#0B0B61;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:40px;
+	font-style:italic;
+	font-weight:bold;
+	text-shadow: 2px 2px #FFFFFF;
 }
 #top_text{
-width:315px;
-clear:both;
-float:left;
-padding:55px 0 0 30px;
-color:#FFFFFF;
+	width:315px;
+	clear:both;
+	float:left;
+	padding:55px 0 0 30px;
+	color:#FFFFFF;
 }
 #cita{
-float:right;
-padding:0px;
-color:#FFFFFF;
-font-family:Arial, Helvetica, sans-serif;
-font-size:12px;
-font-style:italic;
-font-weight:bold;
-text-decoration:none;
+	float:right;
+	padding:0px;
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration:none;
 }
 /*----------------------menu-------------------------*/
 #menu{
-float:right;
-padding:35px 30px 0 0;
+	float:right;
+	padding:35px 30px 0 0;
 }
 #menu ul{
 list-style:none;padding:0px;margin:0px;display:block;
@@ -111,6 +110,11 @@ div#libros{	height: 100px;
   			position: absolute; 
   			width: 100px; }
 
+div#contacto {
+	text-align: center;
+	vertical-align: middle;
+	
+}
 
 h2 { text-align: center;
 	 font-size:30px;} 
@@ -176,6 +180,7 @@ table#archi { border: none;
 table#archi td {width:10%;
 		height:50px;}	
 		
+	
 iframe#codigo { position:relative ;
 				left: 0%;
 				top: 0%;

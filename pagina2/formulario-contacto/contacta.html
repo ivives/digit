@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="spa" lang="spa">
+<head>
+<meta charset="utf-8">
+<title>Formulario de Contacto</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+<form action="contactar.php" method="post">
+<table>
+<tr>
+	<td>Nombre:</td>
+	<td><input type="text" name="nombre" required>*</td>
+</tr>
+<tr>
+	<td>Apellido:</td>
+	<td><input type="text" name="apellido" required>*</td>
+</tr>
+<tr>
+	<td>Correo Electrónico:</td>
+	<td><input type="text" name="correode" required>*</td>
+</tr>
+
+<tr>
+	<td>Mensaje:</td>
+	<td><textarea name="mensaje" rows="8" cols="50" required></textarea></td>
+</tr>
+</table>
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
