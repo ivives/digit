@@ -17,6 +17,14 @@
 	      			num.focus();
 				  	return false;
 				}
+				
+			var numeroEntero = /^(?:\+|-)?\d+$/;
+			if ( !numeroEntero.test(numero) ){
+        		alert("Error: El numero debe ser entero " );
+        		num.focus();
+        		return false;
+			}
+				
 			
 			 if(numero%2 != 0){
 			    alert("El numero " + numero + " es impar"); 

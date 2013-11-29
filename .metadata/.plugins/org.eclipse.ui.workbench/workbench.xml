@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="24" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
-<window height="940" width="1200" x="65" y="24">
+<window height="940" maximized="true" width="1200" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -17,7 +17,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="84" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.aptana.editor.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -26,10 +26,21 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="com.aptana.editor.html" name="ejercicio11b.html" partName="ejercicio11b.html" title="ejercicio11b.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio11b.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/mati/digit/practicasJavaScript/ejercicio11b.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="794" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.html" name="ejercicio33.html" partName="ejercicio33.html" title="ejercicio33.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio33.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="164" selectionOffset="763" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -55,7 +66,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="com.aptana.editor.html" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -154,7 +165,79 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio28b.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ventanacolor.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/degradado.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio27b.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio11b.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
+</editors>
+<item historyLabel="ejercicio28b.html" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ventanacolor.html" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ejercicio28b.html" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="degradado.html" index="2">
+<position info="not_deleted" x="965" y="0"/>
+</item>
+<item historyLabel="ejercicio27b.html" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="degradado.html" index="2">
+<position info="not_deleted" x="965" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="839" y="0"/>
+</item>
+<item historyLabel="degradado.html" index="2">
+<position info="not_deleted" x="965" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="839" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="674" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="835" y="0"/>
+</item>
+<item historyLabel="ejercicio33.html" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="835" y="0"/>
+</item>
+<item historyLabel="ejercicio33.html" index="5">
+<position info="not_deleted" x="763" y="164"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="ejercicio33.html" index="5">
+<position info="not_deleted" x="763" y="164"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="830" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="794" y="0"/>
+</item>
+<item historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="794" y="0"/>
+</item>
+<item active="true" historyLabel="ejercicio11b.html" index="4">
+<position info="not_deleted" x="794" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -171,14 +254,26 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ejercicio33.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio33.html">
+<persistable uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ejercicio11b.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio11b.html">
+<persistable uri="file:/home/mati/digit/practicasJavaScript/ejercicio11b.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ejercicio27b.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio27b.html">
+<persistable uri="file:/home/mati/digit/practicasJavaScript/ejercicio27b.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="degradado.html" tooltip="/home/mati/digit/practicasJavaScript/degradado.html">
+<persistable uri="file:/home/mati/digit/practicasJavaScript/degradado.html"/>
+</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ventanacolor.html" tooltip="/home/mati/digit/practicasJavaScript/ventanacolor.html">
 <persistable uri="file:/home/mati/digit/practicasJavaScript/ventanacolor.html"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="practicasCodigo.html" tooltip="/home/mati/digit/practicasJavaScript/practicasCodigo.html">
-<persistable uri="file:/home/mati/digit/practicasJavaScript/practicasCodigo.html"/>
-</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ejercicio28b.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio28b.html">
 <persistable uri="file:/home/mati/digit/practicasJavaScript/ejercicio28b.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="practicasCodigo.html" tooltip="/home/mati/digit/practicasJavaScript/practicasCodigo.html">
+<persistable uri="file:/home/mati/digit/practicasJavaScript/practicasCodigo.html"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ventanacolor.html" tooltip="/home/mati/digit/pagina2/practicas/practicasJavaScript/ventanacolor.html">
 <persistable uri="file:/home/mati/digit/pagina2/practicas/practicasJavaScript/ventanacolor.html"/>
@@ -194,9 +289,6 @@
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="practicas.html" tooltip="/home/mati/digit/practicasJavaScript/practicas.html">
 <persistable uri="file:/home/mati/digit/practicasJavaScript/practicas.html"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ejercicio33.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio33.html">
-<persistable uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
 </file>
 </mruList>
 </workbench>
