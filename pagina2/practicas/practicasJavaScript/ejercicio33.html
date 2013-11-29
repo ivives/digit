@@ -39,11 +39,17 @@
 			  return false;
 			}
 			
+			if (contra.length < 6) {
+				alert("El campo contraseña no puede tener menos de 6 caracteres");
+				contraseña.focus();
+			  	return false;
+			}
+			
+			
 			if (contra.length == 0) {
 			  alert("El campo contraseña no puede estar vacio");
 			  contraseña.focus();
 			  return false;
-			
 			}else {
 				alert("Cuenta creada correctamente");
 			}
@@ -95,8 +101,14 @@
 			  return false;
 			}
 			
+			if (p1.length < 6) {
+				alert("El campo nueva contraseña no puede tener menos de 6 caracteres");
+				contraseña.focus();
+			  	return false;
+			}
+			
 			if (p1.length == 0 || p2.length == 0) {
-			  alert("Los campos de la contraseña nueva no pueden estar vacios");
+			  alert("Los campos de la nueva contraseña nueva no pueden estar vacios");
 			  nueva.focus();
 			  return false;
 			}
@@ -114,9 +126,7 @@
 			}
 			
 		 }
-		 
-		 
-		 
+			 
 	</script>
 	
 </head>
@@ -131,7 +141,7 @@
 			
 		</p>
 					
-			<table class="formulario"  width="100%">
+			<table id="formulario"  width="100%">
 				<tr align="center">
 					<td width="20%"> </td>
 					<td><u>Cuenta de correo electronico</u></td>
@@ -139,25 +149,22 @@
 					<td width="20%"> </td>
 				</tr>
 				
-				<tr valign="top" align="center">
+				<tr valign="top" >
 					<td> </td>
-					<td width="30%">
-					 <form name="correo" method="post" >
-	                        Direccion de correo electronico:&nbsp;<input type="email" id="direccion"/>
+					<td width="30%" >
+					        Direccion de correo electronico:&nbsp;<input type="email" id="direccion"/>
 	                        <br>
-	                        Contraseña:&nbsp;<input type="text" id="contraseña"/>
-	                 </form>
-					</td>
+	                        <!-- Los campos de contraseña se ponen con el type = password, los he puesto con text para poder ver lo que se escribe -->
+	                        Contraseña:&nbsp;<input type="text" id="contraseña"/> 
+	                 </td>
 					 <td width="30%">
-					 <form name="datos" method="post" >
-	                        Direccion de correo electronico:&nbsp;<input type="email" id="dir"/>
+					        Direccion de correo electronico:&nbsp;<input type="email" id="dir"/>
 	                        <br>
 	                        Contraseña antigüa:&nbsp;<input type="text" id="vieja"/>
 	                        <br>
 	                        Contraseña nueva:&nbsp;<input type="text" id="nueva"/>
 	                        <br>
 	                        Repite contraseña nueva:&nbsp;<input type="text" id="repite"/>
-					</form>
 					</td>
 					<td> </td>
 				</tr>

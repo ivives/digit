@@ -1,7 +1,7 @@
 body {
 	background: #c9edf9;
 	color:#0B0B61;
-	
+	background:url(images/bg.gif) repeat-x top #c9edf9;
 }
 
 #sorteo {
@@ -19,7 +19,7 @@ body {
   			left: 5%; 
   			overflow: hidden; 
   			position: absolute; 
-  			background:url(../../images/fondo_web.jpg) no-repeat top center;
+  			background:url(images/fondo_web.jpg) no-repeat top center;
   			background-size:cover;
   			width: 90%;
   			padding: 10px;
@@ -58,6 +58,7 @@ form {
 	text-align: center;
 	
 }
+
 
 #reloj {
 	left: 35%;
