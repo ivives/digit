@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="49" version="2.0">
 <workbenchAdvisor/>
 <window height="940" maximized="true" width="1200" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -29,17 +29,27 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.aptana.editor.html" name="ejercicio11b.html" partName="ejercicio11b.html" title="ejercicio11b.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio11b.html" workbook="DefaultEditorWorkbook">
+<editor id="com.aptana.editor.html" name="ejercicio11b.html" partName="ejercicio11b.html" title="ejercicio11b.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio11b.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/mati/digit/practicasJavaScript/ejercicio11b.html"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="794" selectionTopPixel="0"/>
 </editor>
 <editor id="com.aptana.editor.html" name="ejercicio33.html" partName="ejercicio33.html" title="ejercicio33.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio33.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
 <editorState selectionHorizontalPixel="0" selectionLength="164" selectionOffset="763" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.html" name="Examen1.html" partName="Examen1.html" title="Examen1.html" tooltip="/home/mati/digit/Examen diciembre/Examen1.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/mati/digit/Examen%20diciembre/Examen1.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="94" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.aptana.editor.html" name="Examen2.html" partName="Examen2.html" title="Examen2.html" tooltip="/home/mati/digit/Examen diciembre/Examen2.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/mati/digit/Examen%20diciembre/Examen2.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="747" selectionTopPixel="439"/>
 </editor>
 </editors>
 <views>
@@ -173,6 +183,8 @@
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio27b.html"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio11b.html"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/Examen%20diciembre/Examen1.html"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" uri="file:/home/mati/digit/Examen%20diciembre/Examen2.html"/>
 </editors>
 <item historyLabel="ejercicio28b.html" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -234,8 +246,26 @@
 <item historyLabel="ejercicio11b.html" index="4">
 <position info="not_deleted" x="794" y="0"/>
 </item>
-<item active="true" historyLabel="ejercicio11b.html" index="4">
+<item historyLabel="ejercicio11b.html" index="4">
 <position info="not_deleted" x="794" y="0"/>
+</item>
+<item historyLabel="Examen1.html" index="6">
+<position info="not_deleted" x="94" y="0"/>
+</item>
+<item historyLabel="Examen2.html" index="7">
+<position info="not_deleted" x="981" y="0"/>
+</item>
+<item historyLabel="Examen2.html" index="7">
+<position info="not_deleted" x="2288" y="0"/>
+</item>
+<item historyLabel="Examen2.html" index="7">
+<position info="not_deleted" x="994" y="0"/>
+</item>
+<item historyLabel="Examen2.html" index="7">
+<position info="not_deleted" x="994" y="0"/>
+</item>
+<item active="true" historyLabel="Examen2.html" index="7">
+<position info="not_deleted" x="1181" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -254,6 +284,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="Examen2.html" tooltip="/home/mati/digit/Examen diciembre/Examen2.html">
+<persistable uri="file:/home/mati/digit/Examen%20diciembre/Examen2.html"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="Examen1.html" tooltip="/home/mati/digit/Examen diciembre/Examen1.html">
+<persistable uri="file:/home/mati/digit/Examen%20diciembre/Examen1.html"/>
+</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="ejercicio33.html" tooltip="/home/mati/digit/practicasJavaScript/ejercicio33.html">
 <persistable uri="file:/home/mati/digit/practicasJavaScript/ejercicio33.html"/>
 </file>
@@ -286,9 +322,6 @@
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="practicas.html" tooltip="/home/mati/digit/pagina2/practicas/practicasJavaScript/practicas.html">
 <persistable uri="file:/home/mati/digit/pagina2/practicas/practicasJavaScript/practicas.html"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.html" name="practicas.html" tooltip="/home/mati/digit/practicasJavaScript/practicas.html">
-<persistable uri="file:/home/mati/digit/practicasJavaScript/practicas.html"/>
 </file>
 </mruList>
 </workbench>
