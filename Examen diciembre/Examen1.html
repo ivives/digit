@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Examen1</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-12-16 -->
+		
+	<script type="text/javascript">
+		
+		
+		var numAle = parseInt(Math.random()* 99 + 1);
+		var i;
+		var resultado = new Array();
+		var numUsuario = prompt("Introduce un numero entre 1 y " + numAle);
+		
+		if( isNaN(numUsuario)) {
+	    	alert("Debes introducir un numero." );
+	     	return false;
+		}
+		
+		if (numUsuario < 1 || numUsuario > numAle){
+			alert("El numero debe estar entre 1 y " + numAle);
+			return false;
+		}
+		
+		for (i = numUsuario ; i <= numAle; i++)
+			resultado[i - numUsuario]= i ;
+		
+		
+		
+		document.write("Nº aleatorio: " + numAle + "<br>Nº elegido por el usuario: " + numUsuario + "<br>" +  resultado);
+		
+	</script>
+	
+	
+</head>
+<body>
+
+</body>
+</html>
+

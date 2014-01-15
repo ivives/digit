@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Examen3</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-12-16 -->
+	
+	<style type="text/css">
+         fieldset{
+            background-color:#CEE3F6;
+            border-color:#0489B1;
+            width:300px; 
+                }
+    </style>
+	
+	<script>
+		function validar(){
+			
+			 var con = document.getElementById("conten");
+			
+			if (con.value == "") {
+	          alert("Es obligatorio introducir un texto");
+	          conten.focus();
+	          return false;
+			}
+			
+			var tipo = document.getElementsByName("tipo");
+			
+			
+			for(i=0; i<tipo.length; i++) {
+	        	tipo[i].checked;
+	        }	
+	        if (tipo[0].checked ){
+	        		if( isNaN(con.value)) {
+	    				alert("El tipo de dato no se corresponde con la opcion seleccionada." );
+	    				content.focus();
+	     				return false;
+					}else{
+						alert("Validacion correcta");
+					}
+	        		
+	        	}else {
+	        		if (tipo[1].checked ){
+	        		if( !isNaN(con.value)) {
+	    				alert("El tipo de dato no se corresponde con la opcion seleccionada." );
+	    				content.focus();
+	     				return false;
+					}else{
+						alert("Validacion correcta");
+					}
+	        	}
+	       }
+			
+			
+		
+		
+		
+		
+		}
+		
+	</script>
+	
+	
+	
+</head>
+<body>
+
+	<fieldset>
+	
+	
+	Contenido:<input type="text" id="conten" /> <br>
+
+				Tipo:
+				<input type="radio" name="tipo"  value="1" id="num" checked="checked"/> numerico
+				<input type="radio" name="tipo"  value="a" id="text" /> texto
+				
+			<br>
+
+		<input id="validar" type="button" value="Validar" onclick="validar()" />
+		<br>
+		<textarea id="mone" rows="1" cols="10"> </textarea>
+</fieldset>	
+
+
+
+</body>
+</html>
+

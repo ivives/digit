@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Examen2</title>
+	<meta name="author" content="mati" />
+	<!-- Date: 2013-12-16 -->
+	
+	<style type="text/css">
+         fieldset{
+            background-color:#CEE3F6;
+            border-color:#0489B1;
+            width:400px; 
+                }
+    </style>
+	
+	
+	
+	<script type="text/javascript">
+	
+	function calcular(){
+		
+		var moneda = document.getElementsByName("tipo");
+		var product = document.getElementById("productos");
+		var mon = new Array();
+		var monedaUtilizada = document.getElementById("mone");
+		
+		
+		var indiceSeleccionado = product.selectedIndex;
+        var opcionSeleccionada = product.options[indiceSeleccionado];
+        var valorSeleccionado = opcionSeleccionada.value;
+		
+		mon[0] = "euros";
+		mon[1] = "dolares";
+		mon[2] = "libras";
+		mon[3] = "pesetas";
+		
+		
+		for(i=0; i<moneda.length; i++) {
+        	if (moneda[i].checked){
+        		mone.value = mon[i];
+        		precio.value = tipo[i].value * valorSeleccionado;
+        	}
+        } 	
+		
+		
+		           
+       
+      
+}
+	
+	</script>
+	
+</head>
+<body>
+<fieldset>
+	Seleccione un producto para conocer su precio.<br>
+	
+	Producto: <select name="productos" id="productos">
+					<option value="">Elige un producto</option>
+					<option value="7">Kingnton Micro SD 2Gb</option>
+					<option value="11">Kingnton Micro SD 4Gb</option>
+					<option value="20">SanDisk Micro SD / TransFlash 8GB</option>
+					<option value="15">Sony Memory Stick Por duo 4GB Bulk</option>
+					<option value="28">Sony Memory Stick Por duo 8GB Bulk</option>
+					
+				</select>
+
+				<br>
+				<input type="radio" name="tipo" value="1" id="euro" checked="checked"/> euros
+				<input type="radio" name="tipo" value="1.36" id="dolar" /> dolares
+				<input type="radio" name="tipo" value="0.87" id="libra" /> libras
+				<input type="radio" name="tipo" value="166.384" id="peseta" /> pesetas
+			<br>
+
+		<input id="calcular" type="button" value="Calcular Precio" onclick="calcular()"/>
+		<input type="text" id="precio" size="5" />  
+		<input type="text" id="mone" size="4" readonly="on" style="border: 0" /> 
+</fieldset>		
+
+</body>
+</html>
+
