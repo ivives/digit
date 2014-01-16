@@ -32,6 +32,7 @@
         var opcionSeleccionada = product.options[indiceSeleccionado];
         var valorSeleccionado = opcionSeleccionada.value;
 		
+		
 		mon[0] = "euros";
 		mon[1] = "dolares";
 		mon[2] = "libras";
@@ -41,14 +42,10 @@
 		for(i=0; i<moneda.length; i++) {
         	if (moneda[i].checked){
         		mone.value = mon[i];
-        		precio.value = tipo[i].value * valorSeleccionado;
+        		precio.value = (moneda[i].value * valorSeleccionado).toFixed(2);
         	}
         } 	
-		
-		
-		           
-       
-      
+	
 }
 	
 	</script>
@@ -76,8 +73,8 @@
 			<br>
 
 		<input id="calcular" type="button" value="Calcular Precio" onclick="calcular()"/>
-		<input type="text" id="precio" size="5" />  
-		<input type="text" id="mone" size="4" readonly="on" style="border: 0" /> 
+		<input type="text" id="precio" size="5" readonly="readonly"/>  
+		<input type="text" id="mone" size="4" readonly="readonly" style="border: 0" /> 
 </fieldset>		
 
 </body>

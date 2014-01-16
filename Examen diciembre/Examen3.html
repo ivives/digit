@@ -22,7 +22,7 @@
 			 var con = document.getElementById("conten");
 			
 			if (con.value == "") {
-	          alert("Es obligatorio introducir un texto");
+	          mone.value =("Es obligatorio introducir un texto");
 	          conten.focus();
 	          return false;
 			}
@@ -35,29 +35,26 @@
 	        }	
 	        if (tipo[0].checked ){
 	        		if( isNaN(con.value)) {
-	    				alert("El tipo de dato no se corresponde con la opcion seleccionada." );
-	    				content.focus();
+	    				mone.value = ("El tipo de dato no se corresponde con la opcion seleccionada." );
+	    				con.value = "";
+	    				con.focus();
 	     				return false;
 					}else{
-						alert("Validacion correcta");
+						mone.value = ("Validacion correcta");
 					}
 	        		
 	        	}else {
 	        		if (tipo[1].checked ){
 	        		if( !isNaN(con.value)) {
-	    				alert("El tipo de dato no se corresponde con la opcion seleccionada." );
-	    				content.focus();
+	    				mone.value = ("El tipo de dato no se corresponde con la opcion seleccionada." );
+	    				con.value = "";
+	    				con.focus();
 	     				return false;
 					}else{
-						alert("Validacion correcta");
+						mone.value = ("Validacion correcta");
 					}
 	        	}
 	       }
-			
-			
-		
-		
-		
 		
 		}
 		
@@ -71,7 +68,7 @@
 	<fieldset>
 	
 	
-	Contenido:<input type="text" id="conten" /> <br>
+	Contenido:<input type="text" id="conten" size="43"/> <br>
 
 				Tipo:
 				<input type="radio" name="tipo"  value="1" id="num" checked="checked"/> numerico
@@ -81,7 +78,7 @@
 
 		<input id="validar" type="button" value="Validar" onclick="validar()" />
 		<br>
-		<textarea id="mone" rows="1" cols="10"> </textarea>
+		<input type="text" id="mone" size="55" readonly="readonly"/> 
 </fieldset>	
 
 
